@@ -433,5 +433,11 @@ export function readOrdersCSV(): NormalizedOrder[] {
     trim: true,
   }) as RawOrderCSVRow[];
 
-  return rawRecords.map((row, index) => normalizeOrderRow(row, index));
+  return rawRecords
+    .map((row, index) => normalizeOrderRow(row, index))
+    .filter(
+      (order) =>
+        (order.farmerState || "").toLowerCase() !== "gujarat" &&
+        (order.retailerState || "").toLowerCase() !== "gujarat"
+    );
 }

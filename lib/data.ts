@@ -16,10 +16,12 @@ import { syncOrdersFromApi } from "./sync-api";
  */
 export function getOrders(): NormalizedOrder[] {
   const synced = getCachedOrders();
-  if (synced && synced.length > 0) {
-    return synced;
-  }
-  return readOrdersCSV();
+  const rawOrders = synced && synced.length > 0 ? synced : readOrdersCSV();
+  return rawOrders.filter(
+    (o) =>
+      (o.farmerState || "").toLowerCase() !== "gujarat" &&
+      (o.retailerState || "").toLowerCase() !== "gujarat"
+  );
 }
 
 /**

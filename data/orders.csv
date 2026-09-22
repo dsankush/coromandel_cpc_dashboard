@@ -1,20 +1,6 @@
 retailer_no,retailer_name,retailer_location,retailer_short_code,retailer_locale_code,retailer_district,retailer_state,retailer_address,retailer_pin_code,farmer_no,farmer_name,farmer_uuid,farmer_state,farmer_district,farmer_crop,farmer_land,address,purchase_id,product1_name,is_approve_by_retailer,retailer_approve_date,no_product_purchase,wa_status,coupon_code,created_at
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-0,Gujarat,AHD,wheat,10,"AHD, Gujarat",7,Product 1 100ml 2,1,2026-08-29 11:03:31,2,read,,2026-08-27 09:49:49
-20294,VOFFICE,AHD,20294,bn_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-1,Gujarat,AHD,wheat,10,"AHD, Gujarat",8,Product 1 100ml 2,0,2026-08-27 10:16:22,2,read,,2026-08-27 09:51:45
-20294,VOFFICE,AHD,20294,kn_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-2,Gujarat,AHD,wheat,10,"AHD, Gujarat",9,Product 1 100ml 2,1,2026-08-29 11:03:33,2,read,,2026-08-27 09:53:54
-20294,VOFFICE,AHD,20294,te_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-3,Gujarat,AHD,wheat,10,"AHD, Gujarat",10,Product 1 100ml 2,1,2026-08-29 11:03:32,2,read,,2026-08-27 09:55:00
-20294,VOFFICE,AHD,20294,mr_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-4,Gujarat,AHD,wheat,10,"AHD, Gujarat",11,Product 1 100ml 2,1,2026-08-29 11:03:32,2,read,,2026-08-27 09:55:54
-20294,VOFFICE,AHD,20294,pa_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-5,Gujarat,AHD,wheat,10,"AHD, Gujarat",12,Product 1 100ml 2,1,2026-08-29 11:03:32,2,read,,2026-08-27 09:56:56
-20294,VOFFICE,AHD,20294,en_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-6,Gujarat,AHD,wheat,10,"AHD, Gujarat",13,Product 1 100ml 2,1,2026-08-29 11:03:31,2,read,,2026-08-27 11:53:50
-20294,VOFFICE,AHD,20294,bn_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-7,Gujarat,AHD,wheat,10,"AHD, Gujarat",14,Product 1 100ml 2,1,2026-09-01 08:54:53,2,read,,2026-08-29 10:18:27
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-8,Gujarat,AHD,wheat,10,"AHD, Gujarat",15,Product 1 100ml 2,1,2026-09-01 08:54:32,2,read,,2026-08-29 11:08:15
-20294,VOFFICE,AHD,20294,en_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-9,Gujarat,AHD,wheat,10,"AHD, Gujarat",16,Product 1 100ml 2,1,2026-09-01 09:02:34,2,read,,2026-08-31 23:07:52
-20294,VOFFICE,AHD,20294,en_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-10,Gujarat,AHD,wheat,10,"AHD, Gujarat",17,Product 1 100ml 2,1,2026-09-01 09:00:23,2,read,,2026-09-01 08:47:22
-20294,VOFFICE,AHD,20294,en_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-11,Gujarat,AHD,wheat,10,"AHD, Gujarat",18,Product 1 100ml 2,1,2026-09-01 09:48:57,2,read,162122,2026-09-01 09:21:51
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-12,Gujarat,AHD,wheat,10,"AHD, Gujarat",19,Product 1 100ml 2,1,2026-09-01 10:05:28,2,read,168589,2026-09-01 09:54:30
 15144,SHREYA,,15144,hi-IN,,,,,9634949589,Shreya,9634949589-13,,,bitter_gourd,0.66,,20,"Caveco 100 ml 2, Prospell 250 ml 1",0,,3,read,,2026-09-02 11:30:24
 15144,SHREYA,,15144,hi-IN,,,,,8317001690,Shreya,8317001690-14,,,hybrid_paddy,2.0,,21,Prospell 250 ml 1,0,,1,read,,2026-09-02 11:36:58
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-15,Gujarat,AHD,wheat,10,"AHD, Gujarat",22,Product 1 100ml 2,0,,2,read,,2026-09-02 11:58:27
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-16,,,wheat,10,,23,Product 1 100ml 2,1,2026-09-02 12:20:11,2,read,174204,2026-09-02 12:07:54
 15144,SHREYA,Gurugram,15144,hi-IN,Gurugram,Haryana,,,9634949589,Shreya,9634949589-17,Haryana,Gurugram,bitter_gourd,0.66,"Gurugram, Haryana",24,Indrastra 60 gm 1,1,2026-09-02 14:58:09,1,read,178145,2026-09-02 13:05:55
 15144,SHREYA,Gurugram,15144,hi-IN,Gurugram,Haryana,,,9634949589,Shreya,9634949589-18,Haryana,Gurugram,bitter_gourd,0.66,"Gurugram, Haryana",25,Indrastra 60 gm 1,0,,1,read,,2026-09-02 13:19:29
@@ -26,11 +12,6 @@ retailer_no,retailer_name,retailer_location,retailer_short_code,retailer_locale_
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-24,,,wheat,10,,31,Product 1 100ml 2,1,2026-09-02 15:15:11,2,read,199429,2026-09-02 15:05:10
 15144,SHREYA,Sangli,15144,hi-IN,Sangli,Maharashtra,,,9634949589,Shreya,9634949589-25,Maharashtra,Sangli,bitter_gourd,0.66,"Sangli, Maharashtra",32,"Benofit 200 gm 1, Fantac Plus 25 ml 1",1,2026-09-02 15:15:12,2,read,221313,2026-09-02 15:05:43
 2316,Nagaraju,Annamayya,2316,te-IN,Annamayya,Andhra Pradesh,,,6395687260,Ankush Kumar,6395687260-26,Andhra Pradesh,Annamayya,hybrid_paddy,1000.0,"Annamayya, Andhra Pradesh",33,"Marvex 150 ml 1, Prachand 40 ml 1, Platina 100 ml 2",0,,4,read,,2026-09-02 17:00:57
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-27,Gujarat,AHD,wheat,10,"AHD, Gujarat",34,Product 1 100ml 2,1,2026-09-02 22:26:12,2,read,239170,2026-09-02 22:15:11
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-28,Gujarat,AHD,wheat,10,"AHD, Gujarat",35,Product 1 100ml 2,1,2026-09-02 22:32:25,2,read,255867,2026-09-02 22:20:21
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-29,Gujarat,AHD,wheat,10,"AHD, Gujarat",36,Product 1 100ml 2,1,2026-09-02 22:45:30,2,read,270149,2026-09-02 22:31:28
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-30,Gujarat,AHD,wheat,10,"AHD, Gujarat",37,Product 1 100ml 2,1,2026-09-03 08:40:20,2,read,274595,2026-09-03 08:35:37
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-31,Gujarat,AHD,wheat,10,"AHD, Gujarat",38,Product 1 100ml 2,1,2026-09-03 09:45:16,2,read,280075,2026-09-03 09:40:30
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-32,,,wheat,10,,39,Product 1 100ml 2,1,2026-09-03 11:00:19,2,read,297977,2026-09-03 10:56:28
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-33,,,wheat,10,,40,Product 1 100ml 2,0,,2,read,,2026-09-03 11:05:54
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-34,,,wheat,10,,41,Product 1 100ml 2,1,2026-09-03 11:15:22,2,read,300768,2026-09-03 11:12:26
@@ -51,9 +32,6 @@ retailer_no,retailer_name,retailer_location,retailer_short_code,retailer_locale_
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-49,,,wheat,10,,56,Product 1 100ml 2,0,,2,read,,2026-09-03 21:27:46
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-50,,,wheat,10,,57,Product 1 100ml 2,1,2026-09-03 21:31:02,2,read,427482,2026-09-03 21:30:35
 20294,VOFFICE,,20294,hi_IN,,,,,8320202852,Nikita,8320202852-51,,,wheat,10,,58,Product 1 100ml 2,1,2026-09-03 21:34:13,2,read,444819,2026-09-03 21:31:48
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-52,Gujarat,AHD,wheat,10,"AHD, Gujarat",59,Product 1 100ml 2,1,2026-09-03 23:00:46,2,read,461557,2026-09-03 22:58:36
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-53,Gujarat,AHD,wheat,10,"AHD, Gujarat",60,Product 1 100ml 2,1,2026-09-03 23:04:12,2,read,461561,2026-09-03 23:02:04
-20294,VOFFICE,AHD,20294,hi_IN,AHD,Gujarat,,,8320202852,Nikita,8320202852-54,Gujarat,AHD,wheat,10,"AHD, Gujarat",61,Product 1 100ml 2,1,2026-09-04 09:55:32,2,read,482356,2026-09-04 09:53:34
 15144,SHREYA,Jalandhar,15144,hi-IN,Jalandhar,Punjab,,,9634949589,Shreya,9634949589-55,Punjab,Jalandhar,bitter_gourd,0.66,"Jalandhar, Punjab",62,"Prospell 250 ml 1, Prachand 40 ml 2",1,2026-09-07 10:30:38,3,read,,2026-09-07 10:30:32
 15144,SHREYA,Pathankot,15144,hi-IN,Pathankot,Punjab,,,9154242252,Priyanka Sahoo,9154242252-56,Punjab,Pathankot,,0.05,"Pathankot, Punjab",63,"Prachand 40 ml 1, Saujas 100 ml,1 ltr 1",1,2026-09-07 11:20:12,2,read,100094,2026-09-07 11:07:48
 15144,SHREYA,Cooch Behar,15144,hi-IN,Cooch Behar,West Bengal,,,9634949589,Shreya,9634949589-57,West Bengal,Cooch Behar,bitter_gourd,0.66,"Cooch Behar, West Bengal",64,"Indrastra 60 gm 1, Marvex 150 ml,300 ml 1",0,,2,read,,2026-09-07 11:15:02

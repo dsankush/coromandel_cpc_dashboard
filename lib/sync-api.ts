@@ -287,8 +287,14 @@ export async function syncOrdersFromApi(): Promise<{
 
     console.log(`[Sync] Successfully retrieved ${allRecords.length} records from API.`);
 
-    // Normalize all records
-    const normalized = allRecords.map((r, i) => normalizeApiRecord(r, i));
+    // Normalize and block/filter out data from Gujarat state
+    const normalized = allRecords
+      .map((r, i) => normalizeApiRecord(r, i))
+      .filter(
+        (o) =>
+          (o.farmerState || "").toLowerCase() !== "gujarat" &&
+          (o.retailerState || "").toLowerCase() !== "gujarat"
+      );
 
     // Update memory cache
     memoryCachedOrders = normalized;
