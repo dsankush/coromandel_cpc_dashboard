@@ -1,5 +1,5 @@
 import {
-  getOrdersAsync,
+  getOrders,
   getKPIs,
   getTimeSeriesData,
   getProductMetrics,
@@ -12,10 +12,9 @@ import { DashboardClient } from "@/components/dashboard/dashboard-client";
 
 // Ensure Next.js always re-evaluates at request time so committed CSV updates reflect instantly
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
-export default async function DashboardPage() {
-  const orders = await getOrdersAsync();
+export default function DashboardPage() {
+  const orders = getOrders();
   const kpis = getKPIs(orders);
   const timeSeries = getTimeSeriesData(orders);
   const products = getProductMetrics(orders);

@@ -224,43 +224,65 @@ export async function syncOrdersFromApi(): Promise<{
   };
 
   try {
-    let currentPage = 1;
-    let lastPage = 1;
     const perPage = 500;
     const allRecords: ApiFarmerReportRecord[] = [];
+    const page1Url = `${apiUrl}?pagination=true&page=1&per_page=${perPage}`;
+    console.log(`[Sync] Fetching page 1...`);
 
-    while (currentPage <= lastPage) {
-      const url = `${apiUrl}?pagination=true&page=${currentPage}&per_page=${perPage}`;
-      console.log(`[Sync] Fetching page ${currentPage}/${lastPage} (${url})...`);
+    const page1Res = await fetch(page1Url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({}),
+      cache: "no-store",
+    });
 
-      const res = await fetch(url, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({}),
-        cache: "no-store",
-      });
+    if (!page1Res.ok) {
+      throw new Error(`API returned HTTP ${page1Res.status}: ${page1Res.statusText}`);
+    }
 
-      if (!res.ok) {
-        throw new Error(`API returned HTTP ${res.status}: ${res.statusText}`);
+    const page1Json = await page1Res.json();
+    if (!page1Json || page1Json.code !== 200 || !page1Json.data) {
+      throw new Error(`Invalid API response: ${page1Json?.message || "Unknown error"}`);
+    }
+
+    const page1Records = (page1Json.data.records || []) as ApiFarmerReportRecord[];
+    allRecords.push(...page1Records);
+
+    const lastPage = Number(page1Json.data.last_page) || 1;
+    if (lastPage > 1) {
+      console.log(`[Sync] Fetching remaining ${lastPage - 1} pages in parallel...`);
+      const remainingPages = Array.from({ length: lastPage - 1 }, (_, i) => i + 2);
+      const remainingBatches = await Promise.all(
+        remainingPages.map(async (pageIndex) => {
+          const pageUrl = `${apiUrl}?pagination=true&page=${pageIndex}&per_page=${perPage}`;
+          try {
+            const res = await fetch(pageUrl, {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({}),
+              cache: "no-store",
+            });
+            if (!res.ok) return [];
+            const j = await res.json();
+            return (j?.data?.records || []) as ApiFarmerReportRecord[];
+          } catch (e) {
+            console.warn(`[Sync] Page ${pageIndex} failed:`, e);
+            return [];
+          }
+        })
+      );
+
+      for (const batch of remainingBatches) {
+        allRecords.push(...batch);
       }
-
-      const json = await res.json();
-      if (!json || json.code !== 200 || !json.data) {
-        throw new Error(`Invalid API response: ${json?.message || "Unknown error"}`);
-      }
-
-      const records = (json.data.records || []) as ApiFarmerReportRecord[];
-      allRecords.push(...records);
-
-      lastPage = Number(json.data.last_page) || 1;
-      if (records.length === 0 || currentPage >= lastPage) {
-        break;
-      }
-      currentPage++;
     }
 
     console.log(`[Sync] Successfully retrieved ${allRecords.length} records from API.`);
