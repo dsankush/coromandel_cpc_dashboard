@@ -15,6 +15,7 @@ import {
   formatStateName,
   isLocationMismatch,
 } from "./parse";
+import { isBlockedPhoneNumber } from "./blocked-numbers";
 
 // In-memory cache for live serverless execution
 let memoryCachedOrders: NormalizedOrder[] | null = null;
@@ -287,13 +288,15 @@ export async function syncOrdersFromApi(): Promise<{
 
     console.log(`[Sync] Successfully retrieved ${allRecords.length} records from API.`);
 
-    // Normalize and block/filter out data from Gujarat state
+    // Normalize and block/filter out data from Gujarat state and blocked phone numbers
     const normalized = allRecords
       .map((r, i) => normalizeApiRecord(r, i))
       .filter(
         (o) =>
           (o.farmerState || "").toLowerCase() !== "gujarat" &&
-          (o.retailerState || "").toLowerCase() !== "gujarat"
+          (o.retailerState || "").toLowerCase() !== "gujarat" &&
+          !isBlockedPhoneNumber(o.farmerNo) &&
+          !isBlockedPhoneNumber(o.retailerNo)
       );
 
     // Update memory cache

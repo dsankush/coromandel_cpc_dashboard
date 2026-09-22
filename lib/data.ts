@@ -7,8 +7,8 @@ import {
 } from "@/types/order";
 import { readOrdersCSV } from "./parse";
 import { getCachedOrders } from "./sync-api";
-
 import { syncOrdersFromApi } from "./sync-api";
+import { isBlockedPhoneNumber } from "./blocked-numbers";
 
 /**
  * Returns all normalized orders synchronously:
@@ -20,7 +20,9 @@ export function getOrders(): NormalizedOrder[] {
   return rawOrders.filter(
     (o) =>
       (o.farmerState || "").toLowerCase() !== "gujarat" &&
-      (o.retailerState || "").toLowerCase() !== "gujarat"
+      (o.retailerState || "").toLowerCase() !== "gujarat" &&
+      !isBlockedPhoneNumber(o.farmerNo) &&
+      !isBlockedPhoneNumber(o.retailerNo)
   );
 }
 

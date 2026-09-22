@@ -8,6 +8,7 @@ import {
   ParsedLineItem,
   RawOrderCSVRow,
 } from "@/types/order";
+import { isBlockedPhoneNumber } from "./blocked-numbers";
 
 /**
  * Official Coromandel CPC Product & SKU Catalog.
@@ -438,6 +439,8 @@ export function readOrdersCSV(): NormalizedOrder[] {
     .filter(
       (order) =>
         (order.farmerState || "").toLowerCase() !== "gujarat" &&
-        (order.retailerState || "").toLowerCase() !== "gujarat"
+        (order.retailerState || "").toLowerCase() !== "gujarat" &&
+        !isBlockedPhoneNumber(order.farmerNo) &&
+        !isBlockedPhoneNumber(order.retailerNo)
     );
 }
