@@ -6,12 +6,44 @@ import {
   ParsedLineItem,
 } from "@/types/order";
 import { readOrdersCSV } from "./parse";
+import { getCachedOrders } from "./sync-api";
+
+import { syncOrdersFromApi } from "./sync-api";
 
 /**
- * Returns all normalized orders freshly read from CSV on disk.
- * No stale caching.
+ * Returns all normalized orders synchronously:
+ * Checks active in-memory / synced cache first, falling back to CSV on disk.
  */
 export function getOrders(): NormalizedOrder[] {
+  const synced = getCachedOrders();
+  if (synced && synced.length > 0) {
+    return synced;
+  }
+  return readOrdersCSV();
+}
+
+/**
+ * Asynchronously returns all normalized orders:
+ * Checks cache first; if empty and CPC_API_KEY is present (e.g. on Vercel),
+ * it fetches live from the API automatically on initial load, then falls back to CSV.
+ */
+export async function getOrdersAsync(): Promise<NormalizedOrder[]> {
+  const cached = getCachedOrders();
+  if (cached && cached.length > 0) {
+    return cached;
+  }
+
+  if (process.env.CPC_API_KEY) {
+    try {
+      const syncResult = await syncOrdersFromApi();
+      if (syncResult.success && syncResult.orders.length > 0) {
+        return syncResult.orders;
+      }
+    } catch (err) {
+      console.warn("[Data] Live fetch failed, falling back to CSV:", err);
+    }
+  }
+
   return readOrdersCSV();
 }
 

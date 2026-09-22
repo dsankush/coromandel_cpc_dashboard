@@ -1,5 +1,5 @@
 import {
-  getOrders,
+  getOrdersAsync,
   getKPIs,
   getTimeSeriesData,
   getProductMetrics,
@@ -14,8 +14,8 @@ import { DashboardClient } from "@/components/dashboard/dashboard-client";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export default function DashboardPage() {
-  const orders = getOrders();
+export default async function DashboardPage() {
+  const orders = await getOrdersAsync();
   const kpis = getKPIs(orders);
   const timeSeries = getTimeSeriesData(orders);
   const products = getProductMetrics(orders);

@@ -228,17 +228,21 @@ export function parseFarmerCrops(raw: string | null | undefined): string[] {
 }
 
 /**
- * Maps raw status code (0, 1, 2) to strongly-typed ApprovalStatus enum.
+ * Maps raw status code (0, 1, 2) or string labels ("Verified", "Approved", "Rejected", "Pending")
+ * to strongly-typed ApprovalStatus enum.
  */
-export function mapApprovalStatus(rawCode: string | number): {
+export function mapApprovalStatus(rawCode: string | number | null | undefined): {
   code: ApprovalStatusCode;
   status: ApprovalStatus;
 } {
-  const codeNum = typeof rawCode === "number" ? rawCode : parseInt(String(rawCode).trim(), 10);
-  if (codeNum === 1) {
+  if (rawCode === null || rawCode === undefined) {
+    return { code: 0, status: ApprovalStatus.Pending };
+  }
+  const str = String(rawCode).trim().toLowerCase();
+  if (str === "1" || str === "approved" || str === "verified") {
     return { code: 1, status: ApprovalStatus.Approved };
   }
-  if (codeNum === 2) {
+  if (str === "2" || str === "rejected") {
     return { code: 2, status: ApprovalStatus.Rejected };
   }
   return { code: 0, status: ApprovalStatus.Pending };

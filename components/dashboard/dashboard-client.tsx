@@ -206,20 +206,33 @@ export function DashboardClient({
     });
   };
 
-  // Live refresh from server
+  // Live sync from WhatsApp CPC Report API & server refresh
   const handleRefresh = async () => {
     setIsRefreshing(true);
     try {
-      const ordersRes = await fetch(`/api/orders?limit=2500&t=${Date.now()}`, {
+      // Step 1: Trigger background live sync from external API
+      try {
+        await fetch("/api/sync", {
+          method: "POST",
+          cache: "no-store",
+        });
+      } catch (syncErr) {
+        console.warn("Live API sync trigger warning:", syncErr);
+      }
+
+      // Step 2: Fetch the refreshed orders
+      const ordersRes = await fetch(`/api/orders?limit=10000&t=${Date.now()}`, {
         cache: "no-store",
       });
       if (ordersRes.ok) {
         const oData = await ordersRes.json();
-        setOrders(oData.orders);
-        setTimestamp(new Date().toISOString());
+        if (Array.isArray(oData.orders)) {
+          setOrders(oData.orders);
+          setTimestamp(new Date().toISOString());
+        }
       }
     } catch (err) {
-      console.error("Refresh error:", err);
+      console.error("Refresh/Sync error:", err);
     } finally {
       setIsRefreshing(false);
     }

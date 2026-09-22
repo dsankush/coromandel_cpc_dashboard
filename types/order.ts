@@ -121,3 +121,38 @@ export interface DashboardKPIs {
   locationMismatchPercentage?: number;
   totalFlaggedFarmers?: number;
 }
+
+export interface ApiProductItem {
+  product_name: string;
+  product_quantity: string | number;
+  product_size: string;
+}
+
+export interface ApiFarmerReportRecord {
+  Order_ID: number | string;
+  Date_of_Entry: string;
+  RIN: string;
+  Retailer_Name: string;
+  Farmer_Name: string;
+  Farmer_Mobile_Number: string;
+  Language_Selected?: string;
+  "Farmer State"?: string;
+  "Farmer District"?: string;
+  "Farmer Pincode"?: string;
+  "Farmer Crops_Selected"?: string;
+  "Farmer Land_Acreage"?: string;
+  Coupon_Code?: string;
+  Submission_Status?: number | string;
+  Retailer_Approval_Status?: string;
+  Approval_Timestamp?: string;
+  products?: ApiProductItem[];
+  "Farmer Lang"?: string;
+  "Farmer Sowing Date"?: string;
+}
+
+export interface SyncStatus {
+  lastSyncedAt: string | null;
+  totalRecords: number;
+  status: "idle" | "syncing" | "success" | "error";
+  errorMessage?: string;
+}

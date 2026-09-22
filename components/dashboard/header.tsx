@@ -116,11 +116,11 @@ export function DashboardHeader({
             size="sm"
             onClick={onRefresh}
             disabled={isRefreshing}
-            className="h-8 gap-1.5 text-xs font-medium"
-            title="Re-reads /data/orders.csv dynamically from disk"
+            className="h-8 gap-1.5 text-xs font-medium border-emerald-600/30 hover:border-emerald-500 hover:bg-emerald-500/10 transition-colors"
+            title="Fetches live orders from WhatsApp CPC Report API and updates dashboard"
           >
-            <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-emerald-500" : ""}`} />
-            <span>Sync CSV</span>
+            <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-emerald-500" : "text-emerald-600"}`} />
+            <span>{isRefreshing ? "Syncing API..." : "Sync Live Data"}</span>
           </Button>
 
           <Button
