@@ -61,13 +61,32 @@ export function DashboardClient({
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const [selectedFarmerUuid, setSelectedFarmerUuid] = useState<string | null>(null);
 
-  // Load stored auth on mount
+  // Load stored auth & cached orders on mount
   useEffect(() => {
     const savedUser = getStoredAuth();
     if (savedUser) {
       setAuthUser(savedUser);
     }
     setAuthChecked(true);
+
+    try {
+      const cached = localStorage.getItem("cpc_cached_orders");
+      const cachedTs = localStorage.getItem("cpc_cached_timestamp");
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const hydrated: NormalizedOrder[] = parsed.map((o: any) => ({
+            ...o,
+            createdAt: new Date(o.createdAt),
+            retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
+          }));
+          setOrders(hydrated);
+          if (cachedTs) setTimestamp(cachedTs);
+        }
+      }
+    } catch (e) {
+      console.warn("[Client] Error restoring cached orders from storage:", e);
+    }
   }, []);
 
   // Global Filter State
@@ -206,37 +225,73 @@ export function DashboardClient({
     });
   };
 
-  // Live sync from WhatsApp CPC Report API & server refresh
+  // Live sync from WhatsApp CPC Report API & immediate UI update
   const handleRefresh = async () => {
     setIsRefreshing(true);
     try {
-      // Step 1: Trigger background live sync from external API
-      try {
-        await fetch("/api/sync", {
-          method: "POST",
-          cache: "no-store",
-        });
-      } catch (syncErr) {
-        console.warn("Live API sync trigger warning:", syncErr);
+      // Step 1: Call /api/sync which pulls directly from the CPC API
+      const syncRes = await fetch("/api/sync", {
+        method: "POST",
+        cache: "no-store",
+      });
+
+      if (syncRes.ok) {
+        const syncData = await syncRes.json();
+        if (syncData.success && Array.isArray(syncData.orders) && syncData.orders.length > 0) {
+          // Directly hydrate the returned live orders into state
+          const hydratedOrders: NormalizedOrder[] = syncData.orders.map((o: any) => ({
+            ...o,
+            createdAt: new Date(o.createdAt),
+            retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
+          }));
+
+          setOrders(hydratedOrders);
+          const newTimestamp = syncData.syncedAt || new Date().toISOString();
+          setTimestamp(newTimestamp);
+
+          // Persist to localStorage so refreshing the page preserves live data
+          try {
+            localStorage.setItem("cpc_cached_orders", JSON.stringify(syncData.orders));
+            localStorage.setItem("cpc_cached_timestamp", newTimestamp);
+          } catch (storageErr) {
+            console.warn("[Client] Storage error:", storageErr);
+          }
+          return;
+        }
       }
 
-      // Step 2: Fetch the refreshed orders
+      // Step 2: Fallback query to /api/orders
       const ordersRes = await fetch(`/api/orders?limit=10000&t=${Date.now()}`, {
         cache: "no-store",
       });
       if (ordersRes.ok) {
         const oData = await ordersRes.json();
-        if (Array.isArray(oData.orders)) {
-          setOrders(oData.orders);
+        if (Array.isArray(oData.orders) && oData.orders.length > 0) {
+          const hydrated = oData.orders.map((o: any) => ({
+            ...o,
+            createdAt: new Date(o.createdAt),
+            retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
+          }));
+          setOrders(hydrated);
           setTimestamp(new Date().toISOString());
         }
       }
     } catch (err) {
-      console.error("Refresh/Sync error:", err);
+      console.error("[Client] Refresh/Sync error:", err);
     } finally {
       setIsRefreshing(false);
     }
   };
+
+  // Background Auto-Sync every 5 minutes while dashboard tab is open
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log("[AutoSync] Performing background sync with CPC API...");
+      handleRefresh();
+    }, 5 * 60 * 1000); // every 5 minutes
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handleFarmerSelect = (uuid: string) => {
     setSelectedFarmerUuid(uuid);

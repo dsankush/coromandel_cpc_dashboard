@@ -60,6 +60,7 @@ async function handleSync(req: NextRequest) {
       message: `Successfully synced ${result.total} orders from CPC Report API`,
       total: result.total,
       syncedAt: new Date().toISOString(),
+      orders: result.orders,
     });
   } catch (err: any) {
     return NextResponse.json(
