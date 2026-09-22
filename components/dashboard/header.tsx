@@ -39,6 +39,7 @@ export function DashboardHeader({
     { id: "products", label: "Products" },
     { id: "retailers", label: "Retailers" },
     { id: "farmers", label: "Farmers" },
+    { id: "missed-calls", label: "Missed Call Report" },
   ];
 
   return (

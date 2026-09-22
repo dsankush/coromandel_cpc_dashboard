@@ -25,6 +25,7 @@ import { OrdersTable } from "./orders-table";
 import { ProductsView } from "./products-view";
 import { RetailersView } from "./retailers-view";
 import { FarmersView } from "./farmers-view";
+import { MissedCallsView } from "./missed-calls-view";
 
 interface DashboardClientProps {
   initialOrders: NormalizedOrder[];
@@ -346,18 +347,20 @@ export function DashboardClient({
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
-        {/* Global Multi-Tab Analytics Filters Bar */}
-        <GlobalFilterBar
-          filterState={filterState}
-          onChange={handleFilterChange}
-          onReset={handleResetFilters}
-          availableStates={availableStates}
-          availableDistricts={availableDistricts}
-          availableCrops={availableCrops}
-          totalOrdersCount={orders.length}
-          filteredOrdersCount={filteredOrders.length}
-          activeTab={activeTab}
-        />
+        {/* Global Multi-Tab Analytics Filters Bar (for Orders & Purchases) */}
+        {activeTab !== "missed-calls" && (
+          <GlobalFilterBar
+            filterState={filterState}
+            onChange={handleFilterChange}
+            onReset={handleResetFilters}
+            availableStates={availableStates}
+            availableDistricts={availableDistricts}
+            availableCrops={availableCrops}
+            totalOrdersCount={orders.length}
+            filteredOrdersCount={filteredOrders.length}
+            activeTab={activeTab}
+          />
+        )}
 
         {activeTab === "overview" && (
           <OverviewView
@@ -409,6 +412,8 @@ export function DashboardClient({
             initialSelectedFarmerUuid={selectedFarmerUuid}
           />
         )}
+
+        {activeTab === "missed-calls" && <MissedCallsView />}
       </main>
 
       {/* Clean Footer (Dynamic Server Parser line completely removed) */}
