@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import * as XLSX from "xlsx";
 import { parse } from "csv-parse/sync";
 import {
   MissedCallRecord,
@@ -11,8 +12,10 @@ import {
 } from "@/types/missed-call";
 
 const SPREADSHEET_ID = "1_ct5eF_GvO_EZ1qvYOjk8x3hIJN3gClt";
-const GOOGLE_CSV_BASE = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=`;
+// Google Drive full workbook export URL (exports all sheets cleanly in 2-3 seconds)
+const GOOGLE_XLSX_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/export?format=xlsx`;
 
+const LOCAL_XLSX_FILE = path.join(process.cwd(), "data", "missed_call_workbook.xlsx");
 const LOCAL_MISSED_CALLS_FILE = path.join(process.cwd(), "data", "missed_call_tracker.csv");
 const LOCAL_UNIQUE_CALLS_FILE = path.join(process.cwd(), "data", "unique_missed_call_tracker.csv");
 const LOCAL_MAPPING_FILE = path.join(process.cwd(), "data", "mapping_sheet.csv");
@@ -46,22 +49,51 @@ export function normalizeStateName(raw: string | null | undefined): string {
 }
 
 /**
- * Normalizes 10-digit phone / Digitrack numbers.
+ * Cleans and normalizes phone and Digitrack numbers.
+ * Handles scientific notation (e.g., 9.18047590498E11 -> 918047590498) and floats.
  */
 function cleanPhone(val: any): string {
-  if (!val) return "";
-  const s = String(val).trim().replace(/['"]/g, "");
+  if (val === null || val === undefined) return "";
+  let s = String(val).trim().replace(/['"]/g, "");
+  if (!s || s.toUpperCase() === "NULL" || s.toUpperCase() === "#N/A") return "";
+
+  // Handle scientific notation
+  if (s.toLowerCase().includes("e")) {
+    const num = Number(s);
+    if (!isNaN(num)) {
+      return String(Math.round(num));
+    }
+  }
+
+  // Remove trailing .0 from float string
+  if (s.endsWith(".0")) {
+    s = s.slice(0, -2);
+  }
+
   return s;
 }
 
 /**
- * Parses date string from Google Sheets.
+ * Parses date string or serial number from Excel / Google Sheets.
  */
-function parseCallDate(raw: string | null | undefined): Date | null {
-  if (!raw || typeof raw !== "string") return null;
+function parseCallDate(raw: any): Date | null {
+  if (raw === null || raw === undefined) return null;
+
+  // Handle numeric Excel date serial number
+  if (typeof raw === "number" || (!isNaN(Number(raw)) && !String(raw).includes("/") && !String(raw).includes("-"))) {
+    const num = Number(raw);
+    if (num > 30000 && num < 60000) {
+      // Excel epoch starts at 1899-12-30
+      const date = new Date(Math.round((num - 25569) * 86400 * 1000));
+      return isNaN(date.getTime()) ? null : date;
+    }
+  }
+
+  const s = String(raw).trim();
+  if (!s) return null;
+
   try {
-    // Examples: "12/09/26 7:48", "12/9/2026 7:48:00"
-    const parts = raw.trim().split(" ");
+    const parts = s.split(" ");
     const datePart = parts[0];
     const timePart = parts[1] || "00:00";
 
@@ -82,87 +114,127 @@ function parseCallDate(raw: string | null | undefined): Date | null {
   } catch (e) {
     // Fallback
   }
-  const fallback = new Date(raw);
+
+  const fallback = new Date(s);
   return isNaN(fallback.getTime()) ? null : fallback;
 }
 
 /**
- * Loads CSV text from Google Sheet URL, falling back to local disk copy.
+ * Fetches the complete workbook buffer from Google Sheets live export,
+ * falling back to local disk copy.
  */
-async function loadSheetCSV(sheetName: string, localFallbackPath: string): Promise<string> {
-  const url = `${GOOGLE_CSV_BASE}${encodeURIComponent(sheetName)}`;
+async function loadWorkbook(): Promise<XLSX.WorkBook | null> {
+  // 1. Try remote fetch of XLSX
   try {
-    const res = await fetch(url, {
+    const res = await fetch(GOOGLE_XLSX_URL, {
       method: "GET",
       cache: "no-store",
-      headers: { Accept: "text/csv" },
+      headers: {
+        Accept: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      },
     });
 
     if (res.ok) {
-      const text = await res.text();
-      if (text && text.length > 50 && !text.includes("<!DOCTYPE html>")) {
-        return text;
+      const arrayBuffer = await res.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      if (buffer.length > 5000) {
+        const wb = XLSX.read(buffer, { type: "buffer" });
+        if (wb && wb.SheetNames.includes("Mapping Sheet")) {
+          // Persist to local disk if writable
+          try {
+            if (fs.existsSync(path.dirname(LOCAL_XLSX_FILE))) {
+              fs.writeFileSync(LOCAL_XLSX_FILE, buffer);
+            }
+          } catch (e) {
+            // Ignore
+          }
+          return wb;
+        }
       }
     }
   } catch (err) {
-    console.warn(`[MissedCalls] Remote fetch for ${sheetName} failed, using local file:`, err);
+    console.warn("[MissedCalls] Remote XLSX fetch failed, falling back to local cache:", err);
   }
 
-  // Fallback to local CSV on disk
-  if (fs.existsSync(localFallbackPath)) {
-    return fs.readFileSync(localFallbackPath, "utf-8");
+  // 2. Fallback to local XLSX file
+  try {
+    if (fs.existsSync(LOCAL_XLSX_FILE)) {
+      const buffer = fs.readFileSync(LOCAL_XLSX_FILE);
+      return XLSX.read(buffer, { type: "buffer" });
+    }
+  } catch (err) {
+    console.warn("[MissedCalls] Failed reading local XLSX file:", err);
   }
 
-  return "";
+  return null;
 }
 
 /**
  * Parses Mapping Sheet and creates a Map keyed by Digitrack Number (the unique key for PTs).
  */
-function parseMappingRecords(csvText: string): Map<string, PTMappingRecord> {
+function buildMappingMap(mappingRows: any[]): Map<string, PTMappingRecord> {
   const map = new Map<string, PTMappingRecord>();
-  if (!csvText) return map;
 
-  try {
-    const records = parse(csvText, {
-      columns: true,
-      skip_empty_lines: true,
-      trim: true,
-      relax_column_count: true,
-    }) as any[];
+  for (const r of mappingRows) {
+    const digitrackNo = cleanPhone(r["Digitrack number"] || r["Digitrack No"] || r["A"]);
+    if (!digitrackNo) continue;
 
-    for (const r of records) {
-      const digitrackNo = cleanPhone(r["Digitrack number"] || r["Digitrack No"]);
-      if (!digitrackNo) continue;
-
-      map.set(digitrackNo, {
-        digitrackNo,
-        division: (r["Division"] || "").trim(),
-        state: normalizeStateName(r["State"]),
-        rbhName: (r["RBH NAME"] || "").trim(),
-        zm: (r["ZM"] || "").trim(),
-        zone: (r["Zone"] || "").trim(),
-        tmName: (r["TM Name"] || "").trim(),
-        tmHeadquarter: (r["TM Headquarter"] || "").trim(),
-        tmiCode: (r["TMI CODE"] || "").trim(),
-        ptName: (r["PT Name"] || "").trim(),
-        ptHeadquarter: (r["PT Headquarter"] || "").trim(),
-        ptDistrict: (r["PT District"] || "").trim(),
-        ptMobile: cleanPhone(r["PT Mobile"]),
-        designation: (r["DESIGN PT/PO/COM.PT"] || "PT").trim(),
-        email: (r["Email"] || "").trim(),
-        language: (r["Language"] || "").trim(),
-      });
-    }
-  } catch (err) {
-    console.error("[MissedCalls] Error parsing Mapping Sheet:", err);
+    map.set(digitrackNo, {
+      digitrackNo,
+      division: String(r["Division"] || r["C"] || "").trim(),
+      state: normalizeStateName(r["State"] || r["D"]),
+      rbhName: String(r["RBH NAME"] || r["E"] || "").trim(),
+      zm: String(r["ZM"] || r["F"] || "").trim(),
+      zone: String(r["Zone"] || r["G"] || "").trim(),
+      tmName: String(r["TM Name"] || r["H"] || "").trim(),
+      tmHeadquarter: String(r["TM Headquarter"] || r["I"] || "").trim(),
+      tmiCode: String(r["TMI CODE"] || r["J"] || "").trim(),
+      ptName: String(r["PT Name"] || r["K"] || "").trim(),
+      ptHeadquarter: String(r["PT Headquarter"] || r["L"] || "").trim(),
+      ptDistrict: String(r["PT District"] || r["M"] || "").trim(),
+      ptMobile: cleanPhone(r["PT Mobile"] || r["N"]),
+      designation: String(r["DESIGN PT/PO/COM.PT"] || r["P"] || "PT").trim(),
+      email: String(r["Email"] || r["Q"] || "").trim(),
+      language: String(r["Language"] || r["R"] || "").trim(),
+    });
   }
 
   return map;
 }
 
 /**
+ * Fallback to parse local CSV files if XLSX reading is unavailable.
+ */
+function loadLocalCsvFallback(): {
+  mappingRows: any[];
+  missedRows: any[];
+  uniqueRows: any[];
+} {
+  const readCsv = (filePath: string) => {
+    if (!fs.existsSync(filePath)) return [];
+    try {
+      const content = fs.readFileSync(filePath, "utf-8");
+      return parse(content, {
+        columns: true,
+        skip_empty_lines: true,
+        trim: true,
+        relax_column_count: true,
+      });
+    } catch {
+      return [];
+    }
+  };
+
+  return {
+    mappingRows: readCsv(LOCAL_MAPPING_FILE),
+    missedRows: readCsv(LOCAL_MISSED_CALLS_FILE),
+    uniqueRows: readCsv(LOCAL_UNIQUE_CALLS_FILE),
+  };
+}
+
+/**
  * Main ingestion & aggregation pipeline for Missed Calls.
+ * Digitrack No is the guaranteed master unique identifier for PTs and lines.
  */
 export async function getMissedCallReportData(
   forceRefresh = false
@@ -178,7 +250,7 @@ export async function getMissedCallReportData(
       if (fs.existsSync(TMP_CACHE_FILE)) {
         const fileData = fs.readFileSync(TMP_CACHE_FILE, "utf-8");
         const parsed = JSON.parse(fileData);
-        if (parsed && parsed.calls && parsed.calls.length > 0) {
+        if (parsed && parsed.calls && parsed.calls.length > 5000) {
           memoryCache = parsed;
           lastCacheTime = now;
           return memoryCache!;
@@ -189,61 +261,68 @@ export async function getMissedCallReportData(
     }
   }
 
-  console.log("[MissedCalls] Fetching fresh missed call data from Google Sheets...");
+  console.log("[MissedCalls] Fetching fresh missed call data...");
 
-  // Fetch all 3 sheets in parallel
-  const [missedCallsCsv, uniqueCallsCsv, mappingCsv] = await Promise.all([
-    loadSheetCSV("Missed call Tracker", LOCAL_MISSED_CALLS_FILE),
-    loadSheetCSV("Unique Missed Call Tracker", LOCAL_UNIQUE_CALLS_FILE),
-    loadSheetCSV("Mapping Sheet", LOCAL_MAPPING_FILE),
-  ]);
+  let mappingRows: any[] = [];
+  let missedRows: any[] = [];
+  let uniqueRows: any[] = [];
 
-  // 1. Build Mapping Map (keyed by Digitrack No)
-  const mappingMap = parseMappingRecords(mappingCsv);
+  const wb = await loadWorkbook();
+  if (wb) {
+    if (wb.Sheets["Mapping Sheet"]) {
+      mappingRows = XLSX.utils.sheet_to_json(wb.Sheets["Mapping Sheet"], { defval: "" });
+    }
+    if (wb.Sheets["Missed call Tracker"]) {
+      missedRows = XLSX.utils.sheet_to_json(wb.Sheets["Missed call Tracker"], { defval: "" });
+    }
+    if (wb.Sheets["Unique Missed Call Tracker"]) {
+      uniqueRows = XLSX.utils.sheet_to_json(wb.Sheets["Unique Missed Call Tracker"], { defval: "" });
+    }
+  }
+
+  // If workbook failed or incomplete, fallback to local CSVs
+  if (mappingRows.length === 0 || missedRows.length === 0) {
+    const fallback = loadLocalCsvFallback();
+    if (mappingRows.length === 0) mappingRows = fallback.mappingRows;
+    if (missedRows.length === 0) missedRows = fallback.missedRows;
+    if (uniqueRows.length === 0) uniqueRows = fallback.uniqueRows;
+  }
+
+  // 1. Build Mapping Map (keyed by Digitrack No - the unique key for PTs)
+  const mappingMap = buildMappingMap(mappingRows);
 
   // 2. Parse Unique Missed Calls to index unique callers per Digitrack No & State
   const uniqueGrowersGlobal = new Set<string>();
   const uniqueByDigitrack = new Map<string, Set<string>>();
   const uniqueByState = new Map<string, Set<string>>();
 
-  if (uniqueCallsCsv) {
-    try {
-      const uRecords = parse(uniqueCallsCsv, {
-        columns: true,
-        skip_empty_lines: true,
-        trim: true,
-        relax_column_count: true,
-      }) as any[];
+  for (const r of uniqueRows) {
+    const grower = cleanPhone(r["Grower"] || r["Grower Mobile"]);
+    const digitrackNo = cleanPhone(r["Digitrack No"] || r["Digitrack number"]);
+    const mapped = mappingMap.get(digitrackNo);
+    const state = normalizeStateName(mapped?.state || r["State"]);
 
-      for (const r of uRecords) {
-        const grower = cleanPhone(r["Grower"]);
-        const digitrackNo = cleanPhone(r["Digitrack No"] || r["Digitrack number"]);
-        const state = normalizeStateName(r["State"]);
+    if (grower) {
+      uniqueGrowersGlobal.add(grower);
 
-        if (grower) {
-          uniqueGrowersGlobal.add(grower);
-
-          if (digitrackNo) {
-            if (!uniqueByDigitrack.has(digitrackNo)) {
-              uniqueByDigitrack.set(digitrackNo, new Set());
-            }
-            uniqueByDigitrack.get(digitrackNo)!.add(grower);
-          }
-
-          if (state) {
-            if (!uniqueByState.has(state)) {
-              uniqueByState.set(state, new Set());
-            }
-            uniqueByState.get(state)!.add(grower);
-          }
+      if (digitrackNo) {
+        if (!uniqueByDigitrack.has(digitrackNo)) {
+          uniqueByDigitrack.set(digitrackNo, new Set());
         }
+        uniqueByDigitrack.get(digitrackNo)!.add(grower);
       }
-    } catch (err) {
-      console.error("[MissedCalls] Error parsing Unique Missed Calls:", err);
+
+      if (state) {
+        if (!uniqueByState.has(state)) {
+          uniqueByState.set(state, new Set());
+        }
+        uniqueByState.get(state)!.add(grower);
+      }
     }
   }
 
   // 3. Parse Total Missed Call Tracker
+  // Use Digitrack No to resolve master PT profile metadata
   const allCalls: MissedCallRecord[] = [];
   const stateStats = new Map<
     string,
@@ -265,83 +344,70 @@ export async function getMissedCallReportData(
     }
   >();
 
-  if (missedCallsCsv) {
-    try {
-      const records = parse(missedCallsCsv, {
-        columns: true,
-        skip_empty_lines: true,
-        trim: true,
-        relax_column_count: true,
-      }) as any[];
+  missedRows.forEach((r, idx) => {
+    const digitrackNo = cleanPhone(r["Digitrack No"] || r["Digitrack number"]);
+    const grower = cleanPhone(r["Grower"] || r["Grower Mobile"]);
+    if (!digitrackNo && !grower) return;
 
-      records.forEach((r, idx) => {
-        const digitrackNo = cleanPhone(r["Digitrack No"] || r["Digitrack number"]);
-        const grower = cleanPhone(r["Grower"]);
-        if (!digitrackNo && !grower) return;
+    // Resolve PT profile strictly via unique Digitrack No
+    const mapped = mappingMap.get(digitrackNo);
 
-        // Merge with Mapping Sheet profile via unique Digitrack No
-        const mapped = mappingMap.get(digitrackNo);
+    const state = normalizeStateName(mapped?.state || r["State"] || "Other");
+    const zone = (mapped?.zone || r["Zone"] || "").trim();
+    const division = (mapped?.division || r["Division"] || "").trim();
+    const ptName = (mapped?.ptName || r["PT Name"] || "Unassigned").trim();
+    const ptHeadquarter = (mapped?.ptHeadquarter || r["PT Headquarter"] || "").trim();
+    const ptDistrict = (mapped?.ptDistrict || r["PT District"] || "").trim();
+    const ptMobile = cleanPhone(mapped?.ptMobile || r["PT Mobile"]);
+    const designation = (mapped?.designation || r["DESIGN PT/PO/COM.PT"] || "PT").trim();
+    const action = String(r["Action"] || "Missed Call").trim();
+    const dateStr = String(r["Date"] || "").trim();
+    const dateProcessed = String(r["Date Processed"] || "").trim();
 
-        const state = normalizeStateName(r["State"] || mapped?.state || "Other");
-        const zone = (r["Zone"] || mapped?.zone || "").trim();
-        const division = (r["Division"] || mapped?.division || "").trim();
-        const ptName = (r["PT Name"] || mapped?.ptName || "Unassigned").trim();
-        const ptHeadquarter = (r["PT Headquarter"] || mapped?.ptHeadquarter || "").trim();
-        const ptDistrict = (r["PT District"] || mapped?.ptDistrict || "").trim();
-        const ptMobile = cleanPhone(r["PT Mobile"] || mapped?.ptMobile);
-        const designation = (r["DESIGN PT/PO/COM.PT"] || mapped?.designation || "PT").trim();
-        const action = (r["Action"] || "Missed Call").trim();
-        const dateStr = (r["Date"] || "").trim();
-        const dateProcessed = (r["Date Processed"] || "").trim();
+    allCalls.push({
+      id: `MC-${idx + 1}`,
+      digitrackNo,
+      grower,
+      date: dateStr,
+      dateParsed: parseCallDate(r["Date"] || dateStr),
+      action,
+      dateProcessed,
+      division,
+      state,
+      zone,
+      ptName,
+      ptHeadquarter,
+      ptDistrict,
+      ptMobile,
+      designation,
+    });
 
-        allCalls.push({
-          id: `MC-${idx + 1}`,
-          digitrackNo,
-          grower,
-          date: dateStr,
-          dateParsed: parseCallDate(dateStr),
-          action,
-          dateProcessed,
-          division,
-          state,
-          zone,
-          ptName,
-          ptHeadquarter,
-          ptDistrict,
-          ptMobile,
-          designation,
-        });
-
-        // State grouping
-        if (!stateStats.has(state)) {
-          stateStats.set(state, { totalCalls: 0, digitracks: new Set() });
-        }
-        const sEntry = stateStats.get(state)!;
-        sEntry.totalCalls += 1;
-        if (digitrackNo) sEntry.digitracks.add(digitrackNo);
-
-        // PT / Digitrack No grouping (Digitrack is the unique key for PT!)
-        const ptKey = digitrackNo || ptName;
-        if (!ptStats.has(ptKey)) {
-          ptStats.set(ptKey, {
-            digitrackNo,
-            ptName,
-            ptHeadquarter,
-            ptDistrict,
-            state,
-            zone,
-            division,
-            ptMobile,
-            designation,
-            totalCalls: 0,
-          });
-        }
-        ptStats.get(ptKey)!.totalCalls += 1;
-      });
-    } catch (err) {
-      console.error("[MissedCalls] Error parsing Missed Call Tracker:", err);
+    // State aggregation
+    if (!stateStats.has(state)) {
+      stateStats.set(state, { totalCalls: 0, digitracks: new Set() });
     }
-  }
+    const sEntry = stateStats.get(state)!;
+    sEntry.totalCalls += 1;
+    if (digitrackNo) sEntry.digitracks.add(digitrackNo);
+
+    // PT aggregation strictly keyed by Digitrack No
+    const ptKey = digitrackNo || ptName;
+    if (!ptStats.has(ptKey)) {
+      ptStats.set(ptKey, {
+        digitrackNo,
+        ptName,
+        ptHeadquarter,
+        ptDistrict,
+        state,
+        zone,
+        division,
+        ptMobile,
+        designation,
+        totalCalls: 0,
+      });
+    }
+    ptStats.get(ptKey)!.totalCalls += 1;
+  });
 
   // 4. Compute KPIs
   const totalCalls = allCalls.length;

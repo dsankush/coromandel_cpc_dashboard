@@ -202,6 +202,9 @@ export function exportOrdersToCsvString(orders: NormalizedOrder[]): string {
 /**
  * Fetches all orders from the external CPC WhatsApp Report API with batch pagination.
  */
+/**
+ * Fetches all orders from the external CPC WhatsApp Report API with controlled chunked pagination.
+ */
 export async function syncOrdersFromApi(): Promise<{
   success: boolean;
   orders: NormalizedOrder[];
@@ -255,41 +258,47 @@ export async function syncOrdersFromApi(): Promise<{
 
     const lastPage = Number(page1Json.data.last_page) || 1;
     if (lastPage > 1) {
-      console.log(`[Sync] Fetching remaining ${lastPage - 1} pages in parallel...`);
+      console.log(`[Sync] Fetching remaining ${lastPage - 1} pages in controlled chunks...`);
       const remainingPages = Array.from({ length: lastPage - 1 }, (_, i) => i + 2);
-      const remainingBatches = await Promise.all(
-        remainingPages.map(async (pageIndex) => {
-          const pageUrl = `${apiUrl}?pagination=true&page=${pageIndex}&per_page=${perPage}`;
-          try {
-            const res = await fetch(pageUrl, {
-              method: "POST",
-              headers: {
-                Authorization: `Bearer ${apiKey}`,
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: JSON.stringify({}),
-              cache: "no-store",
-            });
-            if (!res.ok) return [];
-            const j = await res.json();
-            return (j?.data?.records || []) as ApiFarmerReportRecord[];
-          } catch (e) {
-            console.warn(`[Sync] Page ${pageIndex} failed:`, e);
-            return [];
-          }
-        })
-      );
+      
+      // Process in batches of 2 to avoid socket hangups on the remote server
+      const chunkSize = 2;
+      for (let i = 0; i < remainingPages.length; i += chunkSize) {
+        const chunk = remainingPages.slice(i, i + chunkSize);
+        const batchResults = await Promise.all(
+          chunk.map(async (pageIndex) => {
+            const pageUrl = `${apiUrl}?pagination=true&page=${pageIndex}&per_page=${perPage}`;
+            try {
+              const res = await fetch(pageUrl, {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${apiKey}`,
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                },
+                body: JSON.stringify({}),
+                cache: "no-store",
+              });
+              if (!res.ok) return [];
+              const j = await res.json();
+              return (j?.data?.records || []) as ApiFarmerReportRecord[];
+            } catch (e) {
+              console.warn(`[Sync] Page ${pageIndex} failed:`, e);
+              return [];
+            }
+          })
+        );
 
-      for (const batch of remainingBatches) {
-        allRecords.push(...batch);
+        for (const batch of batchResults) {
+          allRecords.push(...batch);
+        }
       }
     }
 
     console.log(`[Sync] Successfully retrieved ${allRecords.length} records from API.`);
 
     // Normalize and block/filter out data from Gujarat state and blocked phone numbers
-    const normalized = allRecords
+    const newNormalized = allRecords
       .map((r, i) => normalizeApiRecord(r, i))
       .filter(
         (o) =>
@@ -299,11 +308,24 @@ export async function syncOrdersFromApi(): Promise<{
           !isBlockedPhoneNumber(o.retailerNo)
       );
 
+    // Merge with any existing orders by purchaseId to ensure no historical orders are lost
+    const orderMap = new Map<string, NormalizedOrder>();
+    if (memoryCachedOrders) {
+      for (const ord of memoryCachedOrders) {
+        orderMap.set(ord.purchaseId, ord);
+      }
+    }
+    for (const ord of newNormalized) {
+      orderMap.set(ord.purchaseId, ord);
+    }
+
+    const merged = Array.from(orderMap.values());
+
     // Update memory cache
-    memoryCachedOrders = normalized;
+    memoryCachedOrders = merged;
     currentSyncStatus = {
       lastSyncedAt: new Date().toISOString(),
-      totalRecords: normalized.length,
+      totalRecords: merged.length,
       status: "success",
     };
 
@@ -311,7 +333,7 @@ export async function syncOrdersFromApi(): Promise<{
     try {
       fs.writeFileSync(
         TMP_CACHE_FILE,
-        JSON.stringify(normalized, (key, value) => {
+        JSON.stringify(merged, (key, value) => {
           if (value instanceof Date) return value.toISOString();
           return value;
         }),
@@ -325,7 +347,7 @@ export async function syncOrdersFromApi(): Promise<{
     // If local development and writable, also refresh data/orders.csv
     try {
       if (fs.existsSync(path.dirname(LOCAL_CSV_FILE))) {
-        const csvContent = exportOrdersToCsvString(normalized);
+        const csvContent = exportOrdersToCsvString(merged);
         fs.writeFileSync(LOCAL_CSV_FILE, csvContent, "utf-8");
         console.log(`[Sync] Updated local CSV file: ${LOCAL_CSV_FILE}`);
       }
@@ -335,8 +357,8 @@ export async function syncOrdersFromApi(): Promise<{
 
     return {
       success: true,
-      orders: normalized,
-      total: normalized.length,
+      orders: merged,
+      total: merged.length,
     };
   } catch (error: any) {
     const errorMsg = error?.message || "Sync failed";
