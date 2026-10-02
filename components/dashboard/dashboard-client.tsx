@@ -71,11 +71,26 @@ export function DashboardClient({
     setAuthChecked(true);
 
     try {
-      const cached = localStorage.getItem("cpc_cached_orders");
-      const cachedTs = localStorage.getItem("cpc_cached_timestamp");
+      // Purge any stale legacy cache (such as old 678 orders)
+      const legacyCached = localStorage.getItem("cpc_cached_orders");
+      if (legacyCached) {
+        try {
+          const parsedLegacy = JSON.parse(legacyCached);
+          if (Array.isArray(parsedLegacy) && parsedLegacy.length < 5000) {
+            console.log(`[Client] Purging stale legacy cache with only ${parsedLegacy.length} records...`);
+            localStorage.removeItem("cpc_cached_orders");
+            localStorage.removeItem("cpc_cached_timestamp");
+          }
+        } catch {
+          localStorage.removeItem("cpc_cached_orders");
+        }
+      }
+
+      const cached = localStorage.getItem("cpc_cached_orders_v2");
+      const cachedTs = localStorage.getItem("cpc_cached_timestamp_v2");
       if (cached) {
         const parsed = JSON.parse(cached);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length >= (initialOrders?.length || 0) && parsed.length > 5000) {
           const hydrated: NormalizedOrder[] = parsed.map((o: any) => ({
             ...o,
             createdAt: new Date(o.createdAt),
@@ -83,12 +98,20 @@ export function DashboardClient({
           }));
           setOrders(hydrated);
           if (cachedTs) setTimestamp(cachedTs);
+          return;
         }
+      }
+
+      // Always prioritize complete server data over empty or smaller local cache
+      if (initialOrders && initialOrders.length > 0) {
+        setOrders(initialOrders);
+        localStorage.setItem("cpc_cached_orders_v2", JSON.stringify(initialOrders));
+        localStorage.setItem("cpc_cached_timestamp_v2", initialTimestamp);
       }
     } catch (e) {
       console.warn("[Client] Error restoring cached orders from storage:", e);
     }
-  }, []);
+  }, [initialOrders, initialTimestamp]);
 
   // Global Filter State
   const [filterState, setFilterState] = useState<GlobalFilterState>({
@@ -252,8 +275,10 @@ export function DashboardClient({
 
           // Persist to localStorage so refreshing the page preserves live data
           try {
-            localStorage.setItem("cpc_cached_orders", JSON.stringify(syncData.orders));
-            localStorage.setItem("cpc_cached_timestamp", newTimestamp);
+            localStorage.setItem("cpc_cached_orders_v2", JSON.stringify(syncData.orders));
+            localStorage.setItem("cpc_cached_timestamp_v2", newTimestamp);
+            localStorage.removeItem("cpc_cached_orders");
+            localStorage.removeItem("cpc_cached_timestamp");
           } catch (storageErr) {
             console.warn("[Client] Storage error:", storageErr);
           }
@@ -274,7 +299,16 @@ export function DashboardClient({
             retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
           }));
           setOrders(hydrated);
-          setTimestamp(new Date().toISOString());
+          const newTs = new Date().toISOString();
+          setTimestamp(newTs);
+          try {
+            localStorage.setItem("cpc_cached_orders_v2", JSON.stringify(oData.orders));
+            localStorage.setItem("cpc_cached_timestamp_v2", newTs);
+            localStorage.removeItem("cpc_cached_orders");
+            localStorage.removeItem("cpc_cached_timestamp");
+          } catch (storageErr) {
+            console.warn("[Client] Storage error:", storageErr);
+          }
         }
       }
     } catch (err) {
