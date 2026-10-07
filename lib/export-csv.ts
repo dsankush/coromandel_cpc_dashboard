@@ -32,7 +32,7 @@ function downloadBlob(csvContent: string, fileName: string) {
  * 1. FULL DATASET REPORT
  * Strictly excludes any UUID columns.
  */
-export function exportFullReportCSV(orders: NormalizedOrder[]) {
+export function exportFullReportCSV(orders: NormalizedOrder[], filenamePrefix = "coromandel_cpc_analytics_report") {
   const headers = [
     "Purchase ID",
     "Order Date",
@@ -77,7 +77,7 @@ export function exportFullReportCSV(orders: NormalizedOrder[]) {
 
   const csv = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
   const timestamp = new Date().toISOString().slice(0, 10);
-  downloadBlob(csv, `coromandel_cpc_full_analytics_report_${timestamp}.csv`);
+  downloadBlob(csv, `${filenamePrefix}_${timestamp}.csv`);
 }
 
 /**

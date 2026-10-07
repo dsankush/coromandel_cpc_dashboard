@@ -339,7 +339,15 @@ export function DashboardClient({
   };
 
   const handleDownloadFullReport = () => {
-    exportFullReportCSV(filteredOrders);
+    const isFiltered = filteredOrders.length < orders.length;
+    exportFullReportCSV(
+      filteredOrders,
+      isFiltered ? "coromandel_cpc_filtered_report" : "coromandel_cpc_full_analytics_report"
+    );
+  };
+
+  const handleDownloadMasterReport = () => {
+    exportFullReportCSV(orders, "coromandel_cpc_master_report");
   };
 
   // If auth has loaded and user is not signed in, show the Login Screen
@@ -364,6 +372,7 @@ export function DashboardClient({
       {/* Top Header & Navigation with Logo, Role, and Full Report Download */}
       <DashboardHeader
         totalRecords={orders.length}
+        filteredCount={filteredOrders.length}
         lastUpdated={timestamp}
         isRefreshing={isRefreshing}
         onRefresh={handleRefresh}
@@ -377,6 +386,7 @@ export function DashboardClient({
         authUser={authUser}
         onLogout={handleLogout}
         onDownloadFullReport={handleDownloadFullReport}
+        onDownloadMasterReport={handleDownloadMasterReport}
       />
 
       {/* Main Content Area */}

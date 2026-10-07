@@ -203,7 +203,9 @@ export function exportOrdersToCsvString(orders: NormalizedOrder[]): string {
  * Fetches all orders from the external CPC WhatsApp Report API with batch pagination.
  */
 /**
- * Fetches all orders from the external CPC WhatsApp Report API with controlled chunked pagination.
+ * Fetches latest orders from the external CPC WhatsApp Report API.
+ * Uses fast reverse delta pagination (fetches latest pages first) to complete
+ * in under 5 seconds without triggering Vercel serverless timeouts.
  */
 export async function syncOrdersFromApi(): Promise<{
   success: boolean;
@@ -228,12 +230,9 @@ export async function syncOrdersFromApi(): Promise<{
   };
 
   try {
-    const perPage = 500;
-    const allRecords: ApiFarmerReportRecord[] = [];
-    const page1Url = `${apiUrl}?pagination=true&page=1&per_page=${perPage}`;
-    console.log(`[Sync] Fetching page 1...`);
-
-    const page1Res = await fetch(page1Url, {
+    // 1. Fetch metadata in <2s with per_page=1 to get live total & last_page
+    console.log(`[Sync] Checking live API metadata...`);
+    const metaRes = await fetch(`${apiUrl}?pagination=true&page=1&per_page=1`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -244,61 +243,66 @@ export async function syncOrdersFromApi(): Promise<{
       cache: "no-store",
     });
 
-    if (!page1Res.ok) {
-      throw new Error(`API returned HTTP ${page1Res.status}: ${page1Res.statusText}`);
+    if (!metaRes.ok) {
+      throw new Error(`API returned HTTP ${metaRes.status}: ${metaRes.statusText}`);
     }
 
-    const page1Json = await page1Res.json();
-    if (!page1Json || page1Json.code !== 200 || !page1Json.data) {
-      throw new Error(`Invalid API response: ${page1Json?.message || "Unknown error"}`);
+    const metaJson = await metaRes.json();
+    if (!metaJson || metaJson.code !== 200 || !metaJson.data) {
+      throw new Error(`Invalid API response: ${metaJson?.message || "Unknown error"}`);
     }
 
-    const page1Records = (page1Json.data.records || []) as ApiFarmerReportRecord[];
-    allRecords.push(...page1Records);
+    const totalRecordsInApi = Number(metaJson.data.total) || 0;
+    const perPage = 250;
+    const lastPage = Math.ceil(totalRecordsInApi / perPage) || 1;
 
-    const lastPage = Number(page1Json.data.last_page) || 1;
-    if (lastPage > 1) {
-      console.log(`[Sync] Fetching remaining ${lastPage - 1} pages in controlled chunks...`);
-      const remainingPages = Array.from({ length: lastPage - 1 }, (_, i) => i + 2);
-      
-      // Process in batches of 2 to avoid socket hangups on the remote server
-      const chunkSize = 2;
-      for (let i = 0; i < remainingPages.length; i += chunkSize) {
-        const chunk = remainingPages.slice(i, i + chunkSize);
-        const batchResults = await Promise.all(
-          chunk.map(async (pageIndex) => {
-            const pageUrl = `${apiUrl}?pagination=true&page=${pageIndex}&per_page=${perPage}`;
-            try {
-              const res = await fetch(pageUrl, {
-                method: "POST",
-                headers: {
-                  Authorization: `Bearer ${apiKey}`,
-                  "Content-Type": "application/json",
-                  Accept: "application/json",
-                },
-                body: JSON.stringify({}),
-                cache: "no-store",
-              });
-              if (!res.ok) return [];
-              const j = await res.json();
-              return (j?.data?.records || []) as ApiFarmerReportRecord[];
-            } catch (e) {
-              console.warn(`[Sync] Page ${pageIndex} failed:`, e);
-              return [];
-            }
-          })
-        );
+    console.log(`[Sync] API reports ${totalRecordsInApi} total records across ~${lastPage} pages.`);
 
-        for (const batch of batchResults) {
-          allRecords.push(...batch);
+    // 2. Load existing base orders from cache or disk
+    const existingOrders = getCachedOrders() || [];
+    const orderMap = new Map<string, NormalizedOrder>();
+    for (const ord of existingOrders) {
+      orderMap.set(ord.purchaseId, ord);
+    }
+
+    // 3. Reverse delta fetch: only fetch the newest 2 pages (most recent ~500 orders)
+    // This completes in 3-5 seconds, safely under Vercel's 10-15s limit
+    const pagesToFetch = Array.from(
+      new Set([lastPage, Math.max(1, lastPage - 1)])
+    );
+
+    console.log(`[Sync] Fetching newest pages [${pagesToFetch.join(", ")}]...`);
+    const newRecords: ApiFarmerReportRecord[] = [];
+
+    for (const pageIdx of pagesToFetch) {
+      try {
+        const pageUrl = `${apiUrl}?pagination=true&page=${pageIdx}&per_page=${perPage}`;
+        const pRes = await fetch(pageUrl, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({}),
+          cache: "no-store",
+        });
+
+        if (pRes.ok) {
+          const pJson = await pRes.json();
+          if (pJson?.data?.records && Array.isArray(pJson.data.records)) {
+            newRecords.push(...pJson.data.records);
+          }
         }
+      } catch (pageErr) {
+        console.warn(`[Sync] Page ${pageIdx} fetch failed:`, pageErr);
       }
     }
 
-    console.log(`[Sync] Successfully retrieved ${allRecords.length} records from API.`);
+    console.log(`[Sync] Retrieved ${newRecords.length} recent records from live API.`);
 
-    // Normalize and block/filter out data from Gujarat state and blocked phone numbers
-    const newNormalized = allRecords
+    // 4. Normalize and filter (drop Gujarat and test numbers)
+    const cleanNew = newRecords
       .map((r, i) => normalizeApiRecord(r, i))
       .filter(
         (o) =>
@@ -308,18 +312,13 @@ export async function syncOrdersFromApi(): Promise<{
           !isBlockedPhoneNumber(o.retailerNo)
       );
 
-    // Merge with any existing orders by purchaseId to ensure no historical orders are lost
-    const orderMap = new Map<string, NormalizedOrder>();
-    if (memoryCachedOrders) {
-      for (const ord of memoryCachedOrders) {
-        orderMap.set(ord.purchaseId, ord);
-      }
-    }
-    for (const ord of newNormalized) {
+    // 5. Merge into existing orders dictionary
+    for (const ord of cleanNew) {
       orderMap.set(ord.purchaseId, ord);
     }
 
     const merged = Array.from(orderMap.values());
+    merged.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
 
     // Update memory cache
     memoryCachedOrders = merged;
@@ -352,7 +351,7 @@ export async function syncOrdersFromApi(): Promise<{
         console.log(`[Sync] Updated local CSV file: ${LOCAL_CSV_FILE}`);
       }
     } catch (e) {
-      console.warn("[Sync] Local CSV update skipped (read-only filesystem or outside local env).");
+      // Local CSV update skipped in read-only environment
     }
 
     return {
@@ -368,10 +367,12 @@ export async function syncOrdersFromApi(): Promise<{
       status: "error",
       errorMessage: errorMsg,
     };
+
+    const fallbackOrders = getCachedOrders() || [];
     return {
       success: false,
-      orders: memoryCachedOrders || [],
-      total: memoryCachedOrders ? memoryCachedOrders.length : 0,
+      orders: fallbackOrders,
+      total: fallbackOrders.length,
       error: errorMsg,
     };
   }

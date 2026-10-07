@@ -1,0 +1,46 @@
+name: 24/7 Automated CPC Dashboard Sync
+
+on:
+  schedule:
+    # Runs every 1 hour automatically
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  sync-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Full Background Sync
+        env:
+          CPC_API_URL: ${{ secrets.CPC_API_URL || 'https://wa-dashboard.digicides.in/whatsapp/api/cpc/report/farmer' }}
+          CPC_API_KEY: ${{ secrets.CPC_API_KEY || 'b6b2237e2a9e8d8c94c52f1a7aaf8f8b54f2d1a6e4ad42ed9d8a6ec55f0bb1f1' }}
+        run: npm run sync
+
+      - name: Commit and Push if Data Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -n "$(git status --porcelain data/)" ]; then
+            echo "New data detected! Committing updates..."
+            git add data/
+            git commit -m "chore(data): automated 24/7 background sync [skip ci]"
+            git push origin main
+          else
+            echo "No data changes detected. Everything is up to date."
+          fi

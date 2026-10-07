@@ -8,6 +8,7 @@ import { AuthUser } from "@/types/auth";
 
 interface HeaderProps {
   totalRecords: number;
+  filteredCount?: number;
   lastUpdated: string;
   isRefreshing: boolean;
   onRefresh: () => void;
@@ -18,10 +19,12 @@ interface HeaderProps {
   authUser: AuthUser | null;
   onLogout: () => void;
   onDownloadFullReport: () => void;
+  onDownloadMasterReport?: () => void;
 }
 
 export function DashboardHeader({
   totalRecords,
+  filteredCount,
   lastUpdated,
   isRefreshing,
   onRefresh,
@@ -32,6 +35,7 @@ export function DashboardHeader({
   authUser,
   onLogout,
   onDownloadFullReport,
+  onDownloadMasterReport,
 }: HeaderProps) {
   const tabs: { id: string; label: string; badge?: number }[] = [
     { id: "overview", label: "Overview" },
@@ -100,17 +104,44 @@ export function DashboardHeader({
 
         {/* Action Buttons: Full Report Download, Sync, Theme, Logout */}
         <div className="flex flex-wrap items-center gap-2 self-end sm:self-center">
-          {/* Top Level Download Full Report Button */}
-          <Button
-            variant="default"
-            size="sm"
-            onClick={onDownloadFullReport}
-            className="h-8 gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/20"
-            title="Download full report of all orders (zero UUID columns)"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>Download Full Report</span>
-          </Button>
+          {/* Top Level Download Buttons: Filtered vs Master */}
+          {filteredCount !== undefined && filteredCount < totalRecords ? (
+            <div className="flex items-center gap-1.5">
+              <Button
+                variant="default"
+                size="sm"
+                onClick={onDownloadFullReport}
+                className="h-8 gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/20"
+                title={`Download active filtered report (${filteredCount.toLocaleString()} orders)`}
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Filtered ({filteredCount.toLocaleString()})</span>
+              </Button>
+              {onDownloadMasterReport && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={onDownloadMasterReport}
+                  className="h-8 gap-1.5 text-xs font-semibold border-emerald-600/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/10"
+                  title={`Download all ${totalRecords.toLocaleString()} orders unfiltered`}
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Master ({totalRecords.toLocaleString()})</span>
+                </Button>
+              )}
+            </div>
+          ) : (
+            <Button
+              variant="default"
+              size="sm"
+              onClick={onDownloadFullReport}
+              className="h-8 gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/20"
+              title="Download full report of all orders (zero UUID columns)"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download Full Report ({totalRecords.toLocaleString()})</span>
+            </Button>
+          )}
 
           <Button
             variant="outline"
