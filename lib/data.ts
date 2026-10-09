@@ -16,7 +16,8 @@ import { isBlockedPhoneNumber } from "./blocked-numbers";
  */
 export function getOrders(): NormalizedOrder[] {
   const synced = getCachedOrders();
-  const rawOrders = synced && synced.length > 0 ? synced : readOrdersCSV();
+  const disk = readOrdersCSV();
+  const rawOrders = synced && synced.length > disk.length ? synced : disk;
   return rawOrders.filter(
     (o) =>
       (o.farmerState || "").toLowerCase() !== "gujarat" &&
@@ -33,11 +34,12 @@ export function getOrders(): NormalizedOrder[] {
  */
 export async function getOrdersAsync(): Promise<NormalizedOrder[]> {
   const cached = getCachedOrders();
-  if (cached && cached.length > 0) {
+  const disk = readOrdersCSV();
+  if (cached && cached.length > disk.length) {
     return cached;
   }
 
-  if (process.env.CPC_API_KEY) {
+  if (process.env.CPC_API_KEY && (!cached || cached.length === 0)) {
     try {
       const syncResult = await syncOrdersFromApi();
       if (syncResult.success && syncResult.orders.length > 0) {
@@ -48,7 +50,7 @@ export async function getOrdersAsync(): Promise<NormalizedOrder[]> {
     }
   }
 
-  return readOrdersCSV();
+  return disk;
 }
 
 /**
