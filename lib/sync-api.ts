@@ -14,6 +14,7 @@ import {
   parseCouponCodes,
   formatStateName,
   isLocationMismatch,
+  readOrdersCSV,
 } from "./parse";
 import { isBlockedPhoneNumber } from "./blocked-numbers";
 
@@ -272,8 +273,10 @@ export async function syncOrdersFromApi(): Promise<{
 
     console.log(`[Sync] API reports ${totalRecordsInApi} total records across ~${lastPage} pages.`);
 
-    // 2. Load existing base orders from cache or disk
-    const existingOrders = getCachedOrders() || [];
+    // 2. Load existing base orders from disk and cache
+    const diskOrders = readOrdersCSV() || [];
+    const cachedOrders = getCachedOrders() || [];
+    const existingOrders = cachedOrders.length > diskOrders.length ? cachedOrders : diskOrders;
     const orderMap = new Map<string, NormalizedOrder>();
     for (const ord of existingOrders) {
       orderMap.set(ord.purchaseId, ord);
@@ -357,12 +360,16 @@ export async function syncOrdersFromApi(): Promise<{
       console.warn("[Sync] Failed to write /tmp cache:", e);
     }
 
-    // If local development and writable, also refresh data/orders.csv
+    // If local development and writable, only update data/orders.csv if merged count is valid and >= disk count
     try {
       if (fs.existsSync(path.dirname(LOCAL_CSV_FILE))) {
-        const csvContent = exportOrdersToCsvString(merged);
-        fs.writeFileSync(LOCAL_CSV_FILE, csvContent, "utf-8");
-        console.log(`[Sync] Updated local CSV file: ${LOCAL_CSV_FILE}`);
+        if (merged.length >= diskOrders.length && merged.length > 5000) {
+          const csvContent = exportOrdersToCsvString(merged);
+          fs.writeFileSync(LOCAL_CSV_FILE, csvContent, "utf-8");
+          console.log(`[Sync] Updated local CSV file: ${LOCAL_CSV_FILE} (${merged.length} orders)`);
+        } else {
+          console.warn(`[Sync] Safeguard: skipped CSV rewrite (${merged.length} <= ${diskOrders.length})`);
+        }
       }
     } catch (e) {
       // Local CSV update skipped in read-only environment
@@ -396,7 +403,7 @@ export async function syncOrdersFromApi(): Promise<{
  * Returns current memory or /tmp cached orders if available.
  */
 export function getCachedOrders(): NormalizedOrder[] | null {
-  if (memoryCachedOrders && memoryCachedOrders.length > 0) {
+  if (memoryCachedOrders && memoryCachedOrders.length > 5000) {
     return memoryCachedOrders;
   }
 
@@ -405,19 +412,31 @@ export function getCachedOrders(): NormalizedOrder[] | null {
     if (fs.existsSync(TMP_CACHE_FILE)) {
       const data = fs.readFileSync(TMP_CACHE_FILE, "utf-8");
       const parsed = JSON.parse(data) as NormalizedOrder[];
-      // Hydrate dates
-      memoryCachedOrders = parsed.map((o) => ({
-        ...o,
-        createdAt: new Date(o.createdAt),
-        retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
-      }));
-      return memoryCachedOrders;
+      if (Array.isArray(parsed) && parsed.length > 5000) {
+        memoryCachedOrders = parsed.map((o) => ({
+          ...o,
+          createdAt: new Date(o.createdAt),
+          retailerApproveDate: o.retailerApproveDate ? new Date(o.retailerApproveDate) : null,
+        }));
+        return memoryCachedOrders;
+      }
     }
   } catch (e) {
     console.warn("[Sync] Error reading /tmp cache:", e);
   }
 
-  return null;
+  // Fallback to disk orders (contains 8,000+ orders)
+  try {
+    const diskOrders = readOrdersCSV();
+    if (diskOrders && diskOrders.length > 0) {
+      memoryCachedOrders = diskOrders;
+      return memoryCachedOrders;
+    }
+  } catch (e) {
+    console.warn("[Sync] Error reading disk CSV:", e);
+  }
+
+  return memoryCachedOrders || null;
 }
 
 /**
