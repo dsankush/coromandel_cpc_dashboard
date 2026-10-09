@@ -344,7 +344,7 @@ export function normalizeOrderRow(raw: RawOrderCSVRow, index: number): Normalize
   const retailerApproveDate = parseDate(raw.retailer_approve_date);
   const latencyHours = computeApprovalLatencyHours(createdAt, retailerApproveDate);
 
-  const farmerCrops = parseFarmerCrops(raw.farmer_crop);
+  const farmerCrops = parseFarmerCrops(raw.farmer_crop ?? (raw as any).farmer_crops);
   const lineItems = parseProduct1Name(raw.product1_name);
   const couponCodes = parseCouponCodes(raw.coupon_code);
 
@@ -369,7 +369,7 @@ export function normalizeOrderRow(raw: RawOrderCSVRow, index: number): Normalize
   return {
     id: purchaseId,
     purchaseId,
-    retailerNo: (raw.retailer_no ?? "").trim(),
+    retailerNo: (raw.retailer_no ?? (raw as any).retailer_mobile ?? "").trim(),
     retailerName: (raw.retailer_name ?? "").trim(),
     retailerLocation: (raw.retailer_location ?? "").trim(),
     retailerShortCode: (raw.retailer_short_code ?? "").trim(),
@@ -378,7 +378,7 @@ export function normalizeOrderRow(raw: RawOrderCSVRow, index: number): Normalize
     retailerState,
     retailerAddress: (raw.retailer_address ?? "").trim(),
     retailerPinCode: (raw.retailer_pin_code ?? "").trim(),
-    farmerNo: (raw.farmer_no ?? "").trim(),
+    farmerNo: (raw.farmer_no ?? (raw as any).farmer_mobile ?? "").trim(),
     farmerName: (raw.farmer_name ?? "").trim(),
     farmerUuid: (raw.farmer_uuid ?? "").trim(),
     farmerState,
