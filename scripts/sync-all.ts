@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
 import * as XLSX from "xlsx";
-import { parse } from "csv-parse/sync";
+import { readOrdersCSV } from "../lib/parse";
 import { normalizeApiRecord, exportOrdersToCsvString } from "../lib/sync-api";
 import { isBlockedPhoneNumber } from "../lib/blocked-numbers";
+import { NormalizedOrder } from "../types/order";
 
 const CPC_API_URL =
   process.env.CPC_API_URL || "https://wa-dashboard.digicides.in/whatsapp/api/cpc/report/farmer";
@@ -21,14 +22,11 @@ async function syncOrders() {
     return 0;
   }
 
-  // 1. Load existing orders
-  const existingOrdersMap = new Map<string, any>();
-  if (fs.existsSync(ORDERS_CSV_PATH)) {
-    const fileContent = fs.readFileSync(ORDERS_CSV_PATH, "utf-8");
-    const records = parse(fileContent, { columns: true, skip_empty_lines: true });
-    for (const r of records) {
-      existingOrdersMap.set(String(r.purchase_id), r);
-    }
+  // 1. Load existing normalized orders
+  const existingOrders = readOrdersCSV();
+  const existingOrdersMap = new Map<string, NormalizedOrder>();
+  for (const ord of existingOrders) {
+    existingOrdersMap.set(String(ord.purchaseId), ord);
   }
   console.log(`Loaded ${existingOrdersMap.size} existing orders from ${ORDERS_CSV_PATH}`);
 
@@ -108,7 +106,7 @@ async function syncOrders() {
   }
 
   const allMerged = Array.from(existingOrdersMap.values());
-  allMerged.sort((a, b) => new Date(a.createdAt || a.created_at).getTime() - new Date(b.createdAt || b.created_at).getTime());
+  allMerged.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
 
   const csvOut = exportOrdersToCsvString(allMerged);
   fs.writeFileSync(ORDERS_CSV_PATH, csvOut, "utf-8");
@@ -158,4 +156,7 @@ async function main() {
   console.log("\nSync cycle complete!");
 }
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error("Fatal sync error:", err);
+  process.exit(1);
+});

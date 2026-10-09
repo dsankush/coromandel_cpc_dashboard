@@ -168,33 +168,47 @@ export function exportOrdersToCsvString(orders: NormalizedOrder[]): string {
     "created_at",
   ];
 
-  const rows = orders.map((o) => [
-    toCsvValue(o.retailerNo),
-    toCsvValue(o.retailerName),
-    toCsvValue(o.retailerLocation),
-    toCsvValue(o.retailerShortCode),
-    toCsvValue(o.retailerLocaleCode),
-    toCsvValue(o.retailerDistrict),
-    toCsvValue(o.retailerState),
-    toCsvValue(o.retailerAddress),
-    toCsvValue(o.retailerPinCode),
-    toCsvValue(o.farmerNo),
-    toCsvValue(o.farmerName),
-    toCsvValue(o.farmerUuid),
-    toCsvValue(o.farmerState),
-    toCsvValue(o.farmerDistrict),
-    toCsvValue(o.farmerCrops.join(",")),
-    toCsvValue(o.farmerLandRaw),
-    toCsvValue(o.deliveryAddress),
-    toCsvValue(o.purchaseId),
-    toCsvValue(o.rawProductName),
-    toCsvValue(o.statusCode),
-    toCsvValue(o.retailerApproveDateStr || ""),
-    toCsvValue(o.noProductPurchase),
-    toCsvValue(o.waStatus),
-    toCsvValue(o.couponCodes.join(",")),
-    toCsvValue(o.createdAtStr),
-  ]);
+  const rows = orders.map((o: any) => {
+    const cropsVal = Array.isArray(o.farmerCrops)
+      ? o.farmerCrops.join(",")
+      : typeof o.farmerCrops === "string"
+      ? o.farmerCrops
+      : o.farmer_crops || "";
+
+    const couponVal = Array.isArray(o.couponCodes)
+      ? o.couponCodes.join(",")
+      : typeof o.couponCodes === "string"
+      ? o.couponCodes
+      : o.coupon_code || "";
+
+    return [
+      toCsvValue(o.retailerNo ?? o.retailer_mobile ?? ""),
+      toCsvValue(o.retailerName ?? o.retailer_name ?? ""),
+      toCsvValue(o.retailerLocation ?? o.retailer_location ?? ""),
+      toCsvValue(o.retailerShortCode ?? o.retailer_short_code ?? ""),
+      toCsvValue(o.retailerLocaleCode ?? o.retailer_locale_code ?? ""),
+      toCsvValue(o.retailerDistrict ?? o.retailer_district ?? ""),
+      toCsvValue(o.retailerState ?? o.retailer_state ?? ""),
+      toCsvValue(o.retailerAddress ?? o.retailer_address ?? ""),
+      toCsvValue(o.retailerPinCode ?? o.retailer_pin_code ?? ""),
+      toCsvValue(o.farmerNo ?? o.farmer_mobile ?? ""),
+      toCsvValue(o.farmerName ?? o.farmer_name ?? ""),
+      toCsvValue(o.farmerUuid ?? o.farmer_uuid ?? ""),
+      toCsvValue(o.farmerState ?? o.farmer_state ?? ""),
+      toCsvValue(o.farmerDistrict ?? o.farmer_district ?? ""),
+      toCsvValue(cropsVal),
+      toCsvValue(o.farmerLandRaw ?? o.farmer_land ?? ""),
+      toCsvValue(o.deliveryAddress ?? o.address ?? ""),
+      toCsvValue(o.purchaseId ?? o.purchase_id ?? ""),
+      toCsvValue(o.rawProductName ?? o.product1_name ?? ""),
+      toCsvValue(o.statusCode ?? o.is_approve_by_retailer ?? ""),
+      toCsvValue(o.retailerApproveDateStr ?? o.retailer_approve_date ?? ""),
+      toCsvValue(o.noProductPurchase ?? o.no_product_purchase ?? 0),
+      toCsvValue(o.waStatus ?? o.wa_status ?? ""),
+      toCsvValue(couponVal),
+      toCsvValue(o.createdAtStr ?? o.created_at ?? ""),
+    ];
+  });
 
   return [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
 }
