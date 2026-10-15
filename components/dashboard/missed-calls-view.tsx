@@ -43,6 +43,7 @@ export function MissedCallsView() {
   const [data, setData] = useState<MissedCallReportPayload | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
+  const [isDownloading, setIsDownloading] = useState<boolean>(false);
 
   // Filters State
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -63,7 +64,7 @@ export function MissedCallsView() {
     else setIsLoading(true);
 
     try {
-      const url = `/api/missed-calls?limit=10000${forceRefresh ? "&refresh=true" : ""}`;
+      const url = `/api/missed-calls?limit=0${forceRefresh ? "&refresh=true" : ""}`;
       const res = await fetch(url, { cache: "no-store" });
       if (res.ok) {
         const json = await res.json();
@@ -201,63 +202,84 @@ export function MissedCallsView() {
     };
   }, [data?.kpis, filteredCalls, selectedState, selectedZone, selectedPt, searchQuery]);
 
-  // CSV Download Handler
+  // CSV Download Handler - exports 100% of missed call records
   const handleDownloadCsv = () => {
-    if (!filteredCalls || filteredCalls.length === 0) return;
+    try {
+      setIsDownloading(true);
+      const params = new URLSearchParams();
+      params.set("export", "true");
+      if (selectedState !== "ALL") params.set("state", selectedState);
+      if (selectedZone !== "ALL") params.set("zone", selectedZone);
+      if (selectedPt !== "ALL") params.set("ptName", selectedPt);
+      if (searchQuery.trim()) params.set("search", searchQuery.trim());
 
-    const headers = [
-      "Record ID",
-      "Digitrack Number",
-      "Grower Mobile",
-      "Date & Time",
-      "Date Processed",
-      "Action",
-      "Division",
-      "State",
-      "Zone",
-      "PT Name",
-      "PT Headquarter",
-      "PT District",
-      "PT Mobile",
-      "Designation",
-    ];
+      const url = `/api/missed-calls?${params.toString()}`;
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", `Coromandel_Missed_Call_Report_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error("[MissedCalls] Server export failed, generating from client state:", err);
+      if (!filteredCalls || filteredCalls.length === 0) return;
 
-    const escapeCsv = (val: any) => {
-      if (val === null || val === undefined) return "";
-      const s = String(val);
-      if (s.includes(",") || s.includes('"') || s.includes("\n")) {
-        return `"${s.replace(/"/g, '""')}"`;
-      }
-      return s;
-    };
+      const headers = [
+        "Record ID",
+        "Digitrack Number",
+        "Grower Mobile",
+        "Date & Time",
+        "Date Processed",
+        "Action",
+        "Division",
+        "State",
+        "Zone",
+        "PT Name",
+        "PT Headquarter",
+        "PT District",
+        "PT Mobile",
+        "Designation",
+      ];
 
-    const rows = filteredCalls.map((c) => [
-      escapeCsv(c.id),
-      escapeCsv(c.digitrackNo),
-      escapeCsv(c.grower),
-      escapeCsv(c.date),
-      escapeCsv(c.dateProcessed),
-      escapeCsv(c.action),
-      escapeCsv(c.division),
-      escapeCsv(c.state),
-      escapeCsv(c.zone),
-      escapeCsv(c.ptName),
-      escapeCsv(c.ptHeadquarter),
-      escapeCsv(c.ptDistrict),
-      escapeCsv(c.ptMobile),
-      escapeCsv(c.designation),
-    ]);
+      const escapeCsv = (val: any) => {
+        if (val === null || val === undefined) return "";
+        const s = String(val);
+        if (s.includes(",") || s.includes('"') || s.includes("\n") || s.includes("\r")) {
+          return `"${s.replace(/"/g, '""')}"`;
+        }
+        return s;
+      };
 
-    const csvContent = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", `Coromandel_Missed_Call_Report_${new Date().toISOString().slice(0, 10)}.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+      const rows = filteredCalls.map((c) => [
+        escapeCsv(c.id),
+        escapeCsv(c.digitrackNo),
+        escapeCsv(c.grower),
+        escapeCsv(c.date),
+        escapeCsv(c.dateProcessed),
+        escapeCsv(c.action),
+        escapeCsv(c.division),
+        escapeCsv(c.state),
+        escapeCsv(c.zone),
+        escapeCsv(c.ptName),
+        escapeCsv(c.ptHeadquarter),
+        escapeCsv(c.ptDistrict),
+        escapeCsv(c.ptMobile),
+        escapeCsv(c.designation),
+      ]);
+
+      const csvContent = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const blobUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", blobUrl);
+      link.setAttribute("download", `Coromandel_Missed_Call_Report_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(blobUrl);
+    } finally {
+      setTimeout(() => setIsDownloading(false), 1200);
+    }
   };
 
   const handleResetFilters = () => {
@@ -315,12 +337,12 @@ export function MissedCallsView() {
             variant="default"
             size="sm"
             onClick={handleDownloadCsv}
-            disabled={filteredCalls.length === 0}
+            disabled={filteredCalls.length === 0 || isDownloading}
             className="h-8 gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/20"
-            title="Download missed calls as CSV"
+            title="Download full missed call report as CSV"
           >
-            <Download className="w-3.5 h-3.5" />
-            <span>Download Missed Call Report</span>
+            <Download className={`w-3.5 h-3.5 ${isDownloading ? "animate-bounce" : ""}`} />
+            <span>{isDownloading ? "Exporting Full Report..." : "Download Missed Call Report"}</span>
           </Button>
         </div>
       </div>

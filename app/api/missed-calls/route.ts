@@ -17,7 +17,12 @@ export async function GET(req: NextRequest) {
     const isExport = searchParams.get("export") === "true";
 
     const page = parseInt(searchParams.get("page") || "1", 10);
-    const limit = parseInt(searchParams.get("limit") || "50", 10);
+    const limitParam = searchParams.get("limit");
+    // limit 0 or "all" means fetch all rows without slicing
+    const limit =
+      limitParam === "0" || limitParam === "all"
+        ? 0
+        : parseInt(limitParam || "50", 10);
 
     const payload = await getMissedCallReportData(forceRefresh);
 
@@ -49,13 +54,14 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    // Direct CSV export response if requested
+    // Direct CSV export response if requested (exports 100% of filtered/full records)
     if (isExport) {
       const csvData = exportMissedCallsToCsv(filtered);
+      const filename = `Coromandel_Missed_Call_Report_${new Date().toISOString().slice(0, 10)}.csv`;
       return new NextResponse(csvData, {
         headers: {
           "Content-Type": "text/csv; charset=utf-8",
-          "Content-Disposition": `attachment; filename="missed_call_report_${Date.now()}.csv"`,
+          "Content-Disposition": `attachment; filename="${filename}"`,
         },
       });
     }
@@ -74,7 +80,7 @@ export async function GET(req: NextRequest) {
       totalCount: payload.totalCount,
       page,
       limit,
-      totalPages: Math.ceil(totalFiltered / limit),
+      totalPages: limit > 0 ? Math.ceil(totalFiltered / limit) : 1,
       filterOptions: payload.filterOptions,
       lastSyncedAt: payload.lastSyncedAt,
     });

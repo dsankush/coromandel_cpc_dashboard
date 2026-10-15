@@ -31,7 +31,7 @@ async function syncOrders() {
   console.log(`Loaded ${existingOrdersMap.size} existing orders from ${ORDERS_CSV_PATH}`);
 
   // 2. Query live metadata
-  const perPage = 500;
+  const perPage = 200;
   const metaRes = await fetch(`${CPC_API_URL}?pagination=true&page=1&per_page=1`, {
     method: "POST",
     headers: {
@@ -49,42 +49,60 @@ async function syncOrders() {
   const metaJson = await metaRes.json();
   const total = Number(metaJson?.data?.total) || 0;
   const lastPage = Math.ceil(total / perPage) || 1;
-  console.log(`Live API Total: ${total} records across ~${lastPage} pages.`);
+  console.log(`Live API Total: ${total} records across ~${lastPage} pages (per_page=${perPage}).`);
 
   // 3. Fetch from lastPage downwards until historical overlap
   const newRawRecords: any[] = [];
+  let consecutiveOverlaps = 0;
   for (let p = lastPage; p >= 1; p--) {
-    console.log(`Fetching page ${p}/${lastPage}...`);
-    try {
-      const res = await fetch(`${CPC_API_URL}?pagination=true&page=${p}&per_page=${perPage}`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${CPC_API_KEY}`,
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({})
-      });
+    let success = false;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      console.log(`Fetching page ${p}/${lastPage} (attempt ${attempt})...`);
+      try {
+        const res = await fetch(`${CPC_API_URL}?pagination=true&page=${p}&per_page=${perPage}`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${CPC_API_KEY}`,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({})
+        });
 
-      if (!res.ok) {
-        console.warn(`Page ${p} returned ${res.status}. Retrying once...`);
-        continue;
-      }
+        if (!res.ok) {
+          console.warn(`Page ${p} returned ${res.status}. Retrying in 1s...`);
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          continue;
+        }
 
-      const j = await res.json();
-      const recs = j.data?.records || [];
-      let overlap = 0;
-      for (const r of recs) {
-        if (existingOrdersMap.has(String(r.Order_ID))) overlap++;
-        newRawRecords.push(r);
-      }
-      console.log(`Page ${p}: got ${recs.length} records (${overlap} already in local database).`);
-      if (overlap > recs.length * 0.8 && recs.length > 50) {
-        console.log(`Historical boundary reached on page ${p}. Halting sweep.`);
+        const j = await res.json();
+        const recs = j.data?.records || [];
+        let overlap = 0;
+        for (const r of recs) {
+          if (existingOrdersMap.has(String(r.Order_ID))) overlap++;
+          newRawRecords.push(r);
+        }
+        console.log(`Page ${p}: got ${recs.length} records (${overlap} already in local database).`);
+        success = true;
+
+        if (recs.length > 0 && overlap === recs.length) {
+          consecutiveOverlaps++;
+        } else {
+          consecutiveOverlaps = 0;
+        }
+
+        if (consecutiveOverlaps >= 2) {
+          console.log(`Historical boundary reached on page ${p} (2 consecutive 100% overlap pages). Halting sweep.`);
+          p = 0; // stop outer loop
+        }
         break;
+      } catch (e: any) {
+        console.warn(`Page ${p} error (attempt ${attempt}):`, e.message);
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       }
-    } catch (e: any) {
-      console.warn(`Page ${p} error:`, e.message);
+    }
+    if (!success && p > 0) {
+      console.error(`Failed to fetch page ${p} after 3 attempts.`);
     }
   }
 

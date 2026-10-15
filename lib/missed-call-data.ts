@@ -361,7 +361,16 @@ export async function getMissedCallReportData(
     const ptMobile = cleanPhone(mapped?.ptMobile || r["PT Mobile"]);
     const designation = (mapped?.designation || r["DESIGN PT/PO/COM.PT"] || "PT").trim();
     const action = String(r["Action"] || "Missed Call").trim();
-    const dateStr = String(r["Date"] || "").trim();
+    const dateParsed = parseCallDate(r["Date"]);
+    let dateStr = String(r["Date"] || "").trim();
+    if (dateParsed && !dateStr.includes("/") && !dateStr.includes("-")) {
+      const day = String(dateParsed.getUTCDate()).padStart(2, "0");
+      const month = String(dateParsed.getUTCMonth() + 1).padStart(2, "0");
+      const year = dateParsed.getUTCFullYear();
+      const hours = String(dateParsed.getUTCHours()).padStart(2, "0");
+      const mins = String(dateParsed.getUTCMinutes()).padStart(2, "0");
+      dateStr = `${day}/${month}/${year} ${hours}:${mins}`;
+    }
     const dateProcessed = String(r["Date Processed"] || "").trim();
 
     allCalls.push({
@@ -369,7 +378,7 @@ export async function getMissedCallReportData(
       digitrackNo,
       grower,
       date: dateStr,
-      dateParsed: parseCallDate(r["Date"] || dateStr),
+      dateParsed,
       action,
       dateProcessed,
       division,
