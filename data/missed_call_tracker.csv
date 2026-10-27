@@ -19545,721 +19545,615 @@ Digitrack No,Grower,Date,Action,Date Processed,Division,State,Zone,PT Name,PT He
 9.18043E+11,9.19158E+11,22/10/26 21:21,Missed Call,22-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19544
 9.18043E+11,9.17666E+11,22/10/26 23:13,Missed Call,22-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19545
 9.18043E+11,9.18956E+11,22/10/26 23:15,Missed Call,22-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19546
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
+9.18043E+11,9.18985E+11,23/10/26 7:33,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19547
+9.18043E+11,9.19701E+11,23/10/26 7:39,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19548
+9.18043E+11,9.19347E+11,23/10/26 7:43,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19549
+9.18043E+11,9.19146E+11,23/10/26 7:47,Missed Call,23-October-2026,West,Maharastra,NAGPUR,ATUL MOHRULE ,GADCHANDIR,CHANDRAPUR ,8308585723,PT,19550
+9.18043E+11,9.19441E+11,23/10/26 7:47,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19551
+9.18043E+11,9.19146E+11,23/10/26 7:48,Missed Call,23-October-2026,West,Maharastra,NAGPUR,ATUL MOHRULE ,GADCHANDIR,CHANDRAPUR ,8308585723,PT,19552
+9.18043E+11,9.19702E+11,23/10/26 7:50,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19553
+9.18043E+11,9.18766E+11,23/10/26 7:51,Missed Call,23-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19554
+9.18043E+11,9.19909E+11,23/10/26 7:51,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19555
+9.18043E+11,9.19494E+11,23/10/26 7:51,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19556
+9.18043E+11,9.19909E+11,23/10/26 7:52,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19557
+9.18043E+11,9.19704E+11,23/10/26 7:55,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19558
+9.18043E+11,9.17218E+11,23/10/26 7:57,Missed Call,23-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19559
+9.18043E+11,9.17218E+11,23/10/26 7:58,Missed Call,23-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19560
+9.18043E+11,9.163E+11,23/10/26 7:58,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19561
+9.18048E+11,9.18054E+11,23/10/26 8:01,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19562
+9.18048E+11,9.19467E+11,23/10/26 8:02,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19563
+9.18048E+11,9.18931E+11,23/10/26 8:02,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19564
+9.18048E+11,9.17057E+11,23/10/26 8:02,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19565
+9.18048E+11,9.18686E+11,23/10/26 8:04,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19566
+9.18043E+11,9.19441E+11,23/10/26 8:07,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,DURGA PRASAD,Ethakota,Mandapeta,9849936899,PT,19567
+9.18043E+11,9.19964E+11,23/10/26 8:13,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19568
+9.18043E+11,9.18374E+11,23/10/26 8:15,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19569
+9.18048E+11,9.19112E+11,23/10/26 8:21,Missed Call,23-October-2026,North II,Haryana,Hisar,Sunny Kumar,Julana,Jind,6396163100,PT,19570
+9.18043E+11,9.19818E+11,23/10/26 8:22,Missed Call,23-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19571
+9.18043E+11,9.19818E+11,23/10/26 8:22,Missed Call,23-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19572
+9.18043E+11,9.18334E+11,23/10/26 8:28,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,DURGA PRASAD,Ethakota,Mandapeta,9849936899,PT,19573
+9.18043E+11,9.19398E+11,23/10/26 8:30,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19574
+9.18043E+11,9.16297E+11,23/10/26 8:34,Missed Call,23-October-2026,East,West Bengal,KOLKATA-1,SANJAY DAS,Khar Bazar,EGRA,6295146599,PT,19575
+9.18043E+11,9.19574E+11,23/10/26 8:34,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19576
+9.18043E+11,9.1778E+11,23/10/26 8:37,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19577
+9.18043E+11,9.19442E+11,23/10/26 8:41,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19578
+9.18043E+11,9.18179E+11,23/10/26 8:41,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19579
+9.18048E+11,9.17405E+11,23/10/26 8:41,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19580
+9.18043E+11,9.17996E+11,23/10/26 8:45,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19581
+9.18043E+11,9.17996E+11,23/10/26 8:46,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19582
+9.18043E+11,9.18889E+11,23/10/26 8:48,Missed Call,23-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19583
+9.18043E+11,9.1937E+11,23/10/26 8:51,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19584
+9.18043E+11,9.19666E+11,23/10/26 8:51,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19585
+9.18043E+11,9.19921E+11,23/10/26 8:54,Missed Call,23-October-2026,West,Maharastra,NASHIK,AJIT NIPHADE,PIMPALGAON,NASHIK 2,9545922899,PT,19586
+9.18043E+11,9.1986E+11,23/10/26 8:55,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19587
+9.18043E+11,9.19921E+11,23/10/26 8:55,Missed Call,23-October-2026,West,Maharastra,NASHIK,AJIT NIPHADE,PIMPALGAON,NASHIK 2,9545922899,PT,19588
+9.18043E+11,9.19491E+11,23/10/26 8:57,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19589
+9.18043E+11,9.19952E+11,23/10/26 9:09,Missed Call,23-October-2026,South 1,Andhra Pradesh,GUNTUR,Pogula Sivaiah,Macherla ,Macherla,8179749185,PT,19590
+9.18043E+11,9.1631E+11,23/10/26 9:18,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19591
+9.18043E+11,9.18001E+11,23/10/26 9:19,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19592
+9.18043E+11,9.18001E+11,23/10/26 9:19,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19593
+9.18043E+11,9.19553E+11,23/10/26 9:20,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,M.Vamsi Sreedhar,Mydukur,Prodduturu,9515020589,PT,19594
+9.18043E+11,9.19763E+11,23/10/26 9:23,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19595
+9.18048E+11,9.18413E+11,23/10/26 9:24,Missed Call,23-October-2026,North II,Haryana,Hisar,Sunny Kumar,Julana,Jind,6396163100,PT,19596
+9.18048E+11,9.19861E+11,23/10/26 9:25,Missed Call,23-October-2026,North II,Haryana,Hisar,Sunny Kumar,Julana,Jind,6396163100,PT,19597
+9.18043E+11,9.19619E+11,23/10/26 9:26,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,M.Vamsi Sreedhar,Mydukur,Prodduturu,9515020589,PT,19598
+9.18048E+11,9.1905E+11,23/10/26 9:28,Missed Call,23-October-2026,North II,Haryana,Karnal,Raj Kamal,Ladwa,Kurukshetra,9466218120,PO,19599
+9.18048E+11,9.19561E+11,23/10/26 9:28,Missed Call,23-October-2026,North II,Haryana,Hisar,Sunny Kumar,Julana,Jind,6396163100,PT,19600
+9.18043E+11,9.18806E+11,23/10/26 9:30,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19601
+9.18043E+11,9.19815E+11,23/10/26 9:32,Missed Call,23-October-2026,North II,Punjab,LUDHIANA,Arush,Jandiala Guru,AMRITSAR,8382087714,PT,19602
+9.18043E+11,9.19815E+11,23/10/26 9:32,Missed Call,23-October-2026,North II,Punjab,LUDHIANA,Arush,Jandiala Guru,AMRITSAR,8382087714,PT,19603
+9.18043E+11,9.19768E+11,23/10/26 9:35,Missed Call,23-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19604
+9.18043E+11,9.19561E+11,23/10/26 9:36,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19605
+9.18043E+11,9.19951E+11,23/10/26 9:41,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19606
+9.18048E+11,9.19531E+11,23/10/26 9:48,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Aarish,Fazilka,Fazilka,6239086161,PO,19607
+9.18043E+11,9.19493E+11,23/10/26 9:51,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19608
+9.18043E+11,9.19493E+11,23/10/26 9:52,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19609
+9.18043E+11,9.18605E+11,23/10/26 9:53,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19610
+9.18043E+11,9.19924E+11,23/10/26 9:53,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19611
+9.18043E+11,9.17666E+11,23/10/26 9:54,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19612
+9.18043E+11,9.19603E+11,23/10/26 9:56,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19613
+9.18043E+11,9.19561E+11,23/10/26 9:58,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19614
+9.18043E+11,9.19573E+11,23/10/26 10:01,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19615
+9.18043E+11,9.19493E+11,23/10/26 10:06,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19616
+9.18043E+11,9.19493E+11,23/10/26 10:06,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19617
+9.18043E+11,9.18766E+11,23/10/26 10:12,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19618
+9.18043E+11,9.19423E+11,23/10/26 10:14,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19619
+9.18043E+11,9.1949E+11,23/10/26 10:16,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19620
+9.18043E+11,9.17411E+11,23/10/26 10:18,Missed Call,23-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,19621
+9.18043E+11,9.18831E+11,23/10/26 10:19,Missed Call,23-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19622
+9.18043E+11,9.18831E+11,23/10/26 10:20,Missed Call,23-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19623
+9.18043E+11,9.18831E+11,23/10/26 10:20,Missed Call,23-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19624
+9.18043E+11,9.1996E+11,23/10/26 10:26,Missed Call,23-October-2026,West,Maharastra,PUNE,VIPOOL SANGALE,JAYSINGPUR,KOLHAPUR,9175477425,PT,19625
+9.18043E+11,9.19562E+11,23/10/26 10:27,Missed Call,23-October-2026,West,Maharastra,PUNE,VIPOOL SANGALE,JAYSINGPUR,KOLHAPUR,9175477425,PT,19626
+9.18043E+11,9.18106E+11,23/10/26 10:28,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19627
+9.18043E+11,9.19424E+11,23/10/26 10:29,Missed Call,23-October-2026,West,Maharastra,NASHIK,DNYANESHWAR GAIKWAD,KALWAN,SATANA,7769939196,PT,19628
+9.18043E+11,9.17798E+11,23/10/26 10:29,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19629
+9.18043E+11,9.19178E+11,23/10/26 10:30,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19630
+9.18049E+11,9.18432E+11,23/10/26 10:31,Missed Call,23-October-2026,South 2,Karnataka,RAICHUR,shivaraj Patil,Manvi,RAICHUR,7892679558,PT,19631
+9.18043E+11,9.19607E+11,23/10/26 10:36,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19632
+9.18043E+11,9.18669E+11,23/10/26 10:39,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19633
+9.18043E+11,9.18308E+11,23/10/26 10:44,Missed Call,23-October-2026,West,Maharastra,NAGPUR,YASH DHOLE,MORSHI,PARATWADA,8180869493,PT,19634
+9.18043E+11,9.18806E+11,23/10/26 10:48,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19635
+9.18043E+11,9.19357E+11,23/10/26 10:49,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19636
+9.18048E+11,9.1624E+11,23/10/26 10:54,Missed Call,23-October-2026,North II,Punjab,Ludhiana,Ritik Mishra,Ahmedgarh,Malerkotla,8958180719,PT,19637
+9.18048E+11,9.1624E+11,23/10/26 10:56,Missed Call,23-October-2026,North II,Punjab,Ludhiana,Ritik Mishra,Ahmedgarh,Malerkotla,8958180719,PT,19638
+9.18043E+11,9.1878E+11,23/10/26 10:57,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19639
+9.18043E+11,9.1931E+11,23/10/26 10:57,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19640
+9.18048E+11,9.1624E+11,23/10/26 10:57,Missed Call,23-October-2026,North II,Punjab,Ludhiana,Ritik Mishra,Ahmedgarh,Malerkotla,8958180719,PT,19641
+9.18043E+11,9.17756E+11,23/10/26 10:58,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19642
+9.18043E+11,9.19322E+11,23/10/26 10:59,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19643
+9.18043E+11,9.19423E+11,23/10/26 10:59,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19644
+9.18043E+11,9.19326E+11,23/10/26 11:01,Missed Call,23-October-2026,West,Maharastra,NASHIK,DNYANESHWAR JADHAV,NIPHAD,NASHIK 2,9307107532,PT,19645
+9.18043E+11,9.19493E+11,23/10/26 11:03,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19646
+9.18043E+11,9.19157E+11,23/10/26 11:04,Missed Call,23-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19647
+9.18043E+11,9.19975E+11,23/10/26 11:05,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19648
+9.18043E+11,9.17031E+11,23/10/26 11:07,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19649
+9.18048E+11,9.17814E+11,23/10/26 11:07,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19650
+9.18048E+11,9.19856E+11,23/10/26 11:07,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19651
+9.18048E+11,9.1624E+11,23/10/26 11:10,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19652
+9.18048E+11,9.19803E+11,23/10/26 11:10,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19653
+9.18048E+11,9.19417E+11,23/10/26 11:14,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19654
+9.18043E+11,9.19545E+11,23/10/26 11:15,Missed Call,23-October-2026,West,Maharastra,PUNE,SAGAR NANNWARE,KAGAL,KOLHAPUR,9766252651,PT,19655
+9.18043E+11,9.19011E+11,23/10/26 11:17,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19656
+9.18048E+11,9.17016E+11,23/10/26 11:18,Missed Call,23-October-2026,North II,Haryana,Karnal,Rohit,Gohana,Sonipat,9896340515,PT,19657
+9.18043E+11,9.18624E+11,23/10/26 11:20,Missed Call,23-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,19658
+9.18043E+11,9.16302E+11,23/10/26 11:21,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19659
+9.18043E+11,9.16302E+11,23/10/26 11:23,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19660
+9.18043E+11,9.16302E+11,23/10/26 11:24,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19661
+9.18043E+11,9.18767E+11,23/10/26 11:26,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19662
+9.18043E+11,9.18806E+11,23/10/26 11:26,Missed Call,23-October-2026,West,Maharastra,PUNE,PANDURANG SURAWANSHI,SASWAD,PUNE,9325738934,PT,19663
+9.18048E+11,9.17015E+11,23/10/26 11:27,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19664
+9.18048E+11,9.17015E+11,23/10/26 11:28,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19665
+9.18043E+11,9.16305E+11,23/10/26 11:30,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19666
+9.18043E+11,9.19012E+11,23/10/26 11:34,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19667
+9.18043E+11,9.19823E+11,23/10/26 11:34,Missed Call,23-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19668
+9.18048E+11,9.17697E+11,23/10/26 11:35,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19669
+9.18048E+11,9.16281E+11,23/10/26 11:38,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19670
+9.18043E+11,9.17814E+11,23/10/26 11:38,Missed Call,23-October-2026,North II,Punjab,Bhatinda,KETAN KUMAR,Abohar,Abohar,8437959000,PT,19671
+9.18043E+11,9.18727E+11,23/10/26 11:38,Missed Call,23-October-2026,North II,Punjab,Bhatinda,KETAN KUMAR,Abohar,Abohar,8437959000,PT,19672
+9.18043E+11,9.17056E+11,23/10/26 11:39,Missed Call,23-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19673
+9.18043E+11,9.17666E+11,23/10/26 11:39,Missed Call,23-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,19674
+9.18048E+11,9.19466E+11,23/10/26 11:41,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19675
+9.18048E+11,9.17404E+11,23/10/26 11:42,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19676
+9.18043E+11,9.19529E+11,23/10/26 11:44,Missed Call,23-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,19677
+9.18043E+11,9.18146E+11,23/10/26 11:44,Missed Call,23-October-2026,East,West Bengal,KOLKATA-1,NITYANANDA KUILYA,MECHEDA,EGRA,8972768956,PT,19678
+9.18043E+11,9.19012E+11,23/10/26 11:44,Missed Call,23-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,19679
+9.18048E+11,9.19466E+11,23/10/26 11:45,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19680
+9.18043E+11,9.19618E+11,23/10/26 11:45,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19681
+9.18048E+11,9.19878E+11,23/10/26 11:45,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19682
+9.18048E+11,9.19878E+11,23/10/26 11:46,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19683
+9.18043E+11,9.19618E+11,23/10/26 11:46,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19684
+9.18043E+11,9.19618E+11,23/10/26 11:49,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19685
+9.18043E+11,9.19921E+11,23/10/26 11:58,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19686
+9.18043E+11,9.19975E+11,23/10/26 11:59,Missed Call,23-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19687
+9.18043E+11,9.1846E+11,23/10/26 11:59,Missed Call,23-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19688
+9.18043E+11,9.19147E+11,23/10/26 12:01,Missed Call,23-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19689
+9.18043E+11,9.19147E+11,23/10/26 12:01,Missed Call,23-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19690
+9.18048E+11,9.19876E+11,23/10/26 12:11,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19691
+9.18043E+11,9.19705E+11,23/10/26 12:12,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19692
+9.18043E+11,9.1986E+11,23/10/26 12:18,Missed Call,23-October-2026,West,Maharastra,AKOLA,PRADIP THORAT,TELHARA,AKOLA,8888335645,PT,19693
+9.18043E+11,9.19923E+11,23/10/26 12:26,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19694
+9.18043E+11,9.19561E+11,23/10/26 12:26,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19695
+9.18043E+11,9.19635E+11,23/10/26 12:33,Missed Call,23-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,19696
+9.18048E+11,9.19728E+11,23/10/26 12:35,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19697
+9.18043E+11,9.19285E+11,23/10/26 12:35,Missed Call,23-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,19698
+9.18043E+11,9.18483E+11,23/10/26 12:37,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19699
+9.18048E+11,9.19897E+11,23/10/26 12:38,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19700
+9.18048E+11,9.1978E+11,23/10/26 12:43,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19701
+9.18048E+11,9.18838E+11,23/10/26 12:43,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19702
+9.18043E+11,9.1989E+11,23/10/26 12:47,Missed Call,23-October-2026,West,Maharastra,NASHIK,DNYANESHWAR GAIKWAD,KALWAN,SATANA,7769939196,PT,19703
+9.18043E+11,9.18768E+11,23/10/26 12:49,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19704
+9.18043E+11,9.17379E+11,23/10/26 12:57,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19705
+9.18043E+11,9.19285E+11,23/10/26 13:02,Missed Call,23-October-2026,West,Maharastra,NASHIK,DNYANESHWAR JADHAV,NIPHAD,NASHIK 2,9307107532,PT,19706
+9.18043E+11,9.19423E+11,23/10/26 13:07,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19707
+9.18043E+11,9.17745E+11,23/10/26 13:08,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19708
+9.18043E+11,9.19949E+11,23/10/26 13:16,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19709
+9.18043E+11,9.19763E+11,23/10/26 13:17,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19710
+9.18043E+11,9.19357E+11,23/10/26 13:21,Missed Call,23-October-2026,West,Maharastra,NAGPUR,SAGAR KAPLE,PARATWADA,PARATWADA,9096774269,PT,19711
+9.18043E+11,9.17499E+11,23/10/26 13:24,Missed Call,23-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19712
+9.18048E+11,9.19992E+11,23/10/26 13:27,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19713
+9.18048E+11,9.19812E+11,23/10/26 13:28,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19714
+9.18043E+11,9.19097E+11,23/10/26 13:33,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19715
+9.18048E+11,9.19306E+11,23/10/26 13:34,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19716
+9.18043E+11,9.19766E+11,23/10/26 13:36,Missed Call,23-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19717
+9.18043E+11,9.17842E+11,23/10/26 13:38,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19718
+9.18043E+11,9.1838E+11,23/10/26 13:40,Missed Call,23-October-2026,West,Maharastra,PUNE,AJIT GHANWAT,PHALTAN,SATARA,8999204801,PT,19719
+9.18043E+11,9.1808E+11,23/10/26 13:49,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19720
+9.18043E+11,9.1808E+11,23/10/26 13:50,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19721
+9.18043E+11,9.1901E+11,23/10/26 13:55,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,M.Vamsi Sreedhar,Mydukur,Prodduturu,9515020589,PT,19722
+9.18043E+11,9.19731E+11,23/10/26 14:02,Missed Call,23-October-2026,South 2,Karnataka,RAICHUR,Basvaraj,Muddapur,SINDHANUR,7019562620,PT,19723
+9.18048E+11,9.19996E+11,23/10/26 14:05,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19724
+9.18043E+11,9.19867E+11,23/10/26 14:05,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19725
+9.18043E+11,9.19178E+11,23/10/26 14:09,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19726
+9.18043E+11,9.19637E+11,23/10/26 14:10,Missed Call,23-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19727
+9.18043E+11,9.19178E+11,23/10/26 14:11,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19728
+9.18043E+11,9.19637E+11,23/10/26 14:11,Missed Call,23-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19729
+9.18048E+11,9.19876E+11,23/10/26 14:11,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19730
+9.18048E+11,9.18848E+11,23/10/26 14:11,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19731
+9.18043E+11,9.19178E+11,23/10/26 14:13,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19732
+9.18048E+11,9.19356E+11,23/10/26 14:13,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19733
+9.18048E+11,9.19356E+11,23/10/26 14:14,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19734
+9.18048E+11,9.19779E+11,23/10/26 14:14,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19735
+9.18043E+11,9.19922E+11,23/10/26 14:15,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19736
+9.18043E+11,9.19493E+11,23/10/26 14:16,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19737
+9.18043E+11,9.19561E+11,23/10/26 14:17,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19738
+9.18048E+11,9.17356E+11,23/10/26 14:19,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19739
+9.18043E+11,9.17095E+11,23/10/26 14:34,Missed Call,23-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19740
+9.18048E+11,9.19915E+11,23/10/26 14:47,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19741
+9.18048E+11,9.19417E+11,23/10/26 14:49,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19742
+9.18048E+11,9.19417E+11,23/10/26 14:50,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19743
+9.18043E+11,9.18606E+11,23/10/26 14:57,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19744
+9.18043E+11,9.17029E+11,23/10/26 14:58,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19745
+9.18043E+11,9.19022E+11,23/10/26 15:19,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19746
+9.18043E+11,9.19022E+11,23/10/26 15:19,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19747
+9.18043E+11,9.19504E+11,23/10/26 15:21,Missed Call,23-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,19748
+9.18043E+11,9.19504E+11,23/10/26 15:22,Missed Call,23-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,19749
+9.18043E+11,9.18265E+11,23/10/26 15:28,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19750
+9.18043E+11,9.19975E+11,23/10/26 15:29,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19751
+9.18043E+11,9.17066E+11,23/10/26 15:34,Missed Call,23-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19752
+9.18043E+11,9.18788E+11,23/10/26 15:39,Missed Call,23-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19753
+9.18043E+11,9.19912E+11,23/10/26 15:43,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19754
+9.18043E+11,9.17276E+11,23/10/26 15:51,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19755
+9.18043E+11,9.19923E+11,23/10/26 15:51,Missed Call,23-October-2026,West,Maharastra,PUNE,VAIBHAV CHAUDHARI,KURDUWADI,SOLAPUR,9503428599,PT,19756
+9.18048E+11,9.19466E+11,23/10/26 15:51,Missed Call,23-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19757
+9.18043E+11,9.19886E+11,23/10/26 15:52,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19758
+9.18043E+11,9.19705E+11,23/10/26 15:54,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,DURGA PRASAD,Ethakota,Mandapeta,9849936899,PT,19759
+9.18043E+11,9.19921E+11,23/10/26 16:06,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19760
+9.18048E+11,9.19051E+11,23/10/26 16:14,Missed Call,23-October-2026,North II,Haryana,Karnal,Rohit,Gohana,Sonipat,9896340515,PT,19761
+9.18048E+11,9.19051E+11,23/10/26 16:14,Missed Call,23-October-2026,North II,Haryana,Karnal,Rohit,Gohana,Sonipat,9896340515,PT,19762
+9.18043E+11,9.17385E+11,23/10/26 16:16,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19763
+9.18043E+11,9.19059E+11,23/10/26 16:16,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19764
+9.18043E+11,9.19382E+11,23/10/26 16:24,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19765
+9.18043E+11,9.18074E+11,23/10/26 16:24,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19766
+9.18043E+11,9.19391E+11,23/10/26 16:30,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,DURGA PRASAD,Ethakota,Mandapeta,9849936899,PT,19767
+9.18043E+11,9.19001E+11,23/10/26 16:33,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19768
+9.18043E+11,9.19912E+11,23/10/26 16:38,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19769
+9.18043E+11,9.17676E+11,23/10/26 16:40,Missed Call,23-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19770
+9.18043E+11,9.19823E+11,23/10/26 16:42,Missed Call,23-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19771
+9.18043E+11,9.19554E+11,23/10/26 16:44,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19772
+9.18043E+11,9.19677E+11,23/10/26 16:45,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19773
+9.18043E+11,9.18985E+11,23/10/26 16:46,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19774
+9.18043E+11,9.19922E+11,23/10/26 17:00,Missed Call,23-October-2026,West,Maharastra,PUNE,SRIRAM SHIKARE,SANGOLA,PANDHARPUR,9284153920,PT,19775
+9.18043E+11,9.19326E+11,23/10/26 17:00,Missed Call,23-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19776
+9.18043E+11,9.19546E+11,23/10/26 17:00,Missed Call,23-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19777
+9.18043E+11,9.19373E+11,23/10/26 17:03,Missed Call,23-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19778
+9.18043E+11,9.19595E+11,23/10/26 17:09,Missed Call,23-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19779
+9.18043E+11,9.19923E+11,23/10/26 17:14,Missed Call,23-October-2026,West,Maharastra,AKOLA,SHUBHAM AWCHAR,BULDHANA,BULDHANA,9307778774,PT,19780
+9.18043E+11,9.1997E+11,23/10/26 17:18,Missed Call,23-October-2026,West,Maharastra,PUNE,SHAHURAJ JADHAV,KOREGAON,SATARA,8805788485,PT,19781
+9.18043E+11,9.19113E+11,23/10/26 17:21,Missed Call,23-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19782
+9.18043E+11,9.19527E+11,23/10/26 17:23,Missed Call,23-October-2026,West,Maharastra,NASHIK,JAYDIP GAWANDE,JAMNER,JALGAON,7499548829,PT,19783
+9.18043E+11,9.19703E+11,23/10/26 17:24,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19784
+9.18043E+11,9.19823E+11,23/10/26 17:30,Missed Call,23-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19785
+9.18043E+11,9.18712E+11,23/10/26 17:30,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19786
+9.18043E+11,9.1985E+11,23/10/26 17:34,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19787
+9.18043E+11,9.18238E+11,23/10/26 17:35,Missed Call,23-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,19788
+9.18043E+11,9.19619E+11,23/10/26 17:38,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19789
+9.18043E+11,9.17981E+11,23/10/26 17:40,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19790
+9.18043E+11,9.19511E+11,23/10/26 17:41,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19791
+9.18043E+11,9.17383E+11,23/10/26 17:53,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,y.simhachalam,Kothuru ,Vizianagaram,8500381863,PT,19792
+9.18043E+11,9.1958E+11,23/10/26 17:59,Missed Call,23-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19793
+9.18043E+11,9.19949E+11,23/10/26 18:00,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19794
+9.18043E+11,9.19702E+11,23/10/26 18:06,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19795
+9.18043E+11,9.19291E+11,23/10/26 18:15,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19796
+9.18043E+11,9.17502E+11,23/10/26 18:19,Missed Call,23-October-2026,East,West Bengal,KOLKATA-1,SANJAY DAS,Khar Bazar,EGRA,6295146599,PT,19797
+9.18043E+11,9.19075E+11,23/10/26 18:21,Missed Call,23-October-2026,West,Maharastra,PUNE,AJIT GHANWAT,PHALTAN,SATARA,8999204801,PT,19798
+9.18043E+11,9.19266E+11,23/10/26 18:37,Missed Call,23-October-2026,East,West Bengal,KOLKATA-1,SANJAY DAS,Khar Bazar,EGRA,6295146599,PT,19799
+9.18043E+11,9.18412E+11,23/10/26 18:53,Missed Call,23-October-2026,West,Maharastra,AKOLA,GANESH DUBE,WASHIM,WASHIM,9623313471,PT,19800
+9.18043E+11,9.1624E+11,23/10/26 19:01,Missed Call,23-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19801
+9.18043E+11,9.19011E+11,23/10/26 19:03,Missed Call,23-October-2026,South 1,Telangana,WARANGAL,SANDEEP,Paleru,KHAMMAM,9542818792,PT,19802
+9.18048E+11,9.18968E+11,23/10/26 19:12,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Gurcharan Singh,Faridkot,Moga,8872110176,PO,19803
+9.18048E+11,9.18968E+11,23/10/26 19:12,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Gurcharan Singh,Faridkot,Moga,8872110176,PO,19804
+9.18048E+11,9.19878E+11,23/10/26 19:13,Missed Call,23-October-2026,North II,Punjab,Bhatinda,Gurcharan Singh,Faridkot,Moga,8872110176,PO,19805
+9.18048E+11,9.14329E+11,23/10/26 19:14,Missed Call,23-October-2026,North II,Haryana,Hisar,Pragat Singh,Kalanwali,Dabwali,8059563164,PO,19806
+9.18043E+11,9.1836E+11,23/10/26 19:20,Missed Call,23-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19807
+9.18043E+11,9.19398E+11,23/10/26 19:20,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19808
+9.18048E+11,9.19068E+11,23/10/26 19:23,Missed Call,23-October-2026,North II,Haryana,Karnal,Ajay,Kaul,Kaithal,9068737014,PT,19809
+9.18043E+11,9.19855E+11,23/10/26 19:24,Missed Call,23-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19810
+9.18043E+11,9.17661E+11,23/10/26 19:26,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19811
+9.18043E+11,9.19623E+11,23/10/26 19:31,Missed Call,23-October-2026,West,Maharastra,PUNE,AJIT GHANWAT,PHALTAN,SATARA,8999204801,PT,19812
+9.18043E+11,9.19529E+11,23/10/26 19:31,Missed Call,23-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,19813
+9.18043E+11,9.19147E+11,23/10/26 19:31,Missed Call,23-October-2026,West,Maharastra,PUNE,AJIT GHANWAT,PHALTAN,SATARA,8999204801,PT,19814
+9.18043E+11,9.19529E+11,23/10/26 19:31,Missed Call,23-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,19815
+9.18043E+11,9.17263E+11,23/10/26 19:37,Missed Call,23-October-2026,West,Maharastra,PUNE,VAIBHAV CHAUDHARI,KURDUWADI,SOLAPUR,9503428599,PT,19816
+9.18043E+11,9.19463E+11,23/10/26 19:39,Missed Call,23-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19817
+9.18043E+11,9.18334E+11,23/10/26 19:44,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19818
+9.18043E+11,9.18466E+11,23/10/26 19:49,Missed Call,23-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19819
+9.18043E+11,9.19519E+11,23/10/26 20:10,Missed Call,23-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,19820
+9.18043E+11,9.17031E+11,23/10/26 22:26,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19821
+9.18043E+11,9.19666E+11,23/10/26 22:26,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19822
+9.18043E+11,9.1735E+11,23/10/26 22:26,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19823
+9.18043E+11,9.17666E+11,23/10/26 22:26,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19824
+9.18043E+11,9.19666E+11,23/10/26 22:28,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19825
+9.18043E+11,9.19076E+11,23/10/26 23:09,Missed Call,23-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19826
+9.18043E+11,9.19285E+11,23/10/26 23:26,Missed Call,23-October-2026,West,Maharastra,NASHIK,JAYDIP GAWANDE,JAMNER,JALGAON,7499548829,PT,19827
+9.18048E+11,9.19593E+11,24/10/26 6:37,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19828
+9.18048E+11,9.1978E+11,24/10/26 6:47,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19829
+9.18043E+11,9.16304E+11,24/10/26 6:47,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19830
+9.18043E+11,9.19503E+11,24/10/26 7:12,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19831
+9.18043E+11,9.1818E+11,24/10/26 7:13,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19832
+9.18043E+11,9.1818E+11,24/10/26 7:14,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19833
+9.18043E+11,9.19618E+11,24/10/26 7:17,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19834
+9.18048E+11,9.19815E+11,24/10/26 7:40,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19835
+9.18043E+11,9.19815E+11,24/10/26 7:51,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19836
+9.18048E+11,9.18295E+11,24/10/26 8:00,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19837
+9.18048E+11,9.18295E+11,24/10/26 8:00,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19838
+9.18048E+11,9.18295E+11,24/10/26 8:00,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Suresh Kumar,Sardulgarh,Mansa,8054851747,PO,19839
+9.18043E+11,9.17501E+11,24/10/26 8:04,Missed Call,24-October-2026,East,West Bengal,KOLKATA-1,SAIKAT GIRI,Fecoghat,MIDNAPORE,9775343977,PT,19840
+9.18043E+11,9.17586E+11,24/10/26 8:04,Missed Call,24-October-2026,East,West Bengal,KOLKATA-1,SAIKAT GIRI,Fecoghat,MIDNAPORE,9775343977,PT,19841
+9.18043E+11,9.19476E+11,24/10/26 8:10,Missed Call,24-October-2026,East,West Bengal,KOLKATA-1,SAIKAT GIRI,Fecoghat,MIDNAPORE,9775343977,PT,19842
+9.18043E+11,9.19781E+11,24/10/26 8:12,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19843
+9.18043E+11,9.16284E+11,24/10/26 8:16,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19844
+9.18043E+11,9.1735E+11,24/10/26 8:23,Missed Call,24-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19845
+9.18043E+11,9.18437E+11,24/10/26 8:26,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19846
+9.18043E+11,9.18437E+11,24/10/26 8:27,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19847
+9.18043E+11,9.18437E+11,24/10/26 8:28,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19848
+9.18043E+11,9.1996E+11,24/10/26 8:30,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19849
+9.18043E+11,9.1735E+11,24/10/26 8:30,Missed Call,24-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19850
+9.18043E+11,9.18147E+11,24/10/26 8:32,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19851
+9.18043E+11,9.19392E+11,24/10/26 8:32,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19852
+9.18043E+11,9.18437E+11,24/10/26 8:34,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19853
+9.18043E+11,9.18437E+11,24/10/26 8:35,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19854
+9.18043E+11,9.17096E+11,24/10/26 8:39,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19855
+9.18043E+11,9.1964E+11,24/10/26 8:40,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19856
+9.18043E+11,9.17558E+11,24/10/26 8:40,Missed Call,24-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19857
+9.18043E+11,9.19056E+11,24/10/26 8:54,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19858
+9.18043E+11,9.19011E+11,24/10/26 9:07,Missed Call,24-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19859
+9.18043E+11,9.19011E+11,24/10/26 9:07,Missed Call,24-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19860
+9.18048E+11,9.17496E+11,24/10/26 9:08,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19861
+9.18043E+11,9.17058E+11,24/10/26 9:09,Missed Call,24-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19862
+9.18043E+11,9.19011E+11,24/10/26 9:13,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19863
+9.18043E+11,9.17731E+11,24/10/26 9:17,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19864
+9.18043E+11,9.19177E+11,24/10/26 9:20,Missed Call,24-October-2026,South 1,Telangana,WARANGAL,NASRESH,Luxettipet,MANCHERIAL,9908919148,PT,19865
+9.18043E+11,9.16302E+11,24/10/26 9:20,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19866
+9.18043E+11,9.18097E+11,24/10/26 9:28,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19867
+9.18043E+11,9.19515E+11,24/10/26 9:28,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19868
+9.18043E+11,9.16006E+11,24/10/26 9:29,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19869
+9.18043E+11,9.1879E+11,24/10/26 9:32,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19870
+9.18043E+11,9.17386E+11,24/10/26 9:40,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19871
+9.18043E+11,9.19075E+11,24/10/26 9:45,Missed Call,24-October-2026,West,Maharastra,NASHIK,KIRAN CHOPADE,MAKHMALABAD,NASHIK 1,9370561323,PT,19872
+9.18043E+11,9.17674E+11,24/10/26 9:46,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19873
+9.18043E+11,9.19834E+11,24/10/26 9:49,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19874
+9.18043E+11,9.1735E+11,24/10/26 9:55,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19875
+9.18043E+11,9.18248E+11,24/10/26 10:01,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19876
+9.18043E+11,9.19967E+11,24/10/26 10:07,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19877
+9.18043E+11,9.19866E+11,24/10/26 10:08,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19878
+9.18043E+11,9.19391E+11,24/10/26 10:10,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19879
+9.18043E+11,9.17388E+11,24/10/26 10:11,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19880
+9.18043E+11,9.19495E+11,24/10/26 10:12,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Vijayawada,7569098372,PT,19881
+9.18048E+11,9.19054E+11,24/10/26 10:13,Missed Call,24-October-2026,North II,Haryana,Karnal,Aman Tyagi,Gharaunda,Karnal,7409837939,PT,19882
+9.18043E+11,9.19347E+11,24/10/26 10:13,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,19883
+9.18043E+11,9.18484E+11,24/10/26 10:14,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19884
+9.18043E+11,9.19765E+11,24/10/26 10:19,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19885
+9.18043E+11,9.19096E+11,24/10/26 10:22,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19886
+9.18043E+11,9.18768E+11,24/10/26 10:25,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19887
+9.18043E+11,9.197E+11,24/10/26 10:28,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19888
+9.18043E+11,9.19423E+11,24/10/26 10:39,Missed Call,24-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19889
+9.18043E+11,9.18446E+11,24/10/26 10:45,Missed Call,24-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19890
+9.18043E+11,9.17998E+11,24/10/26 10:48,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19891
+9.18043E+11,9.19674E+11,24/10/26 10:50,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19892
+9.18043E+11,9.19579E+11,24/10/26 10:51,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19893
+9.18048E+11,9.17016E+11,24/10/26 10:51,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19894
+9.18043E+11,9.18248E+11,24/10/26 10:52,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19895
+9.18048E+11,9.19468E+11,24/10/26 10:52,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19896
+9.18043E+11,9.19395E+11,24/10/26 10:55,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19897
+9.18043E+11,9.1955E+11,24/10/26 10:58,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19898
+9.18043E+11,9.19011E+11,24/10/26 10:58,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19899
+9.18048E+11,9.17016E+11,24/10/26 10:59,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19900
+9.18043E+11,9.19011E+11,24/10/26 11:00,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19901
+9.18048E+11,9.19896E+11,24/10/26 11:03,Missed Call,24-October-2026,North II,Haryana,Karnal,Sainky Kumar,Siwan,Kaithal,8859907052,PT,19902
+9.18043E+11,9.17659E+11,24/10/26 11:05,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19903
+9.18043E+11,9.17351E+11,24/10/26 11:05,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19904
+9.18043E+11,9.18888E+11,24/10/26 11:07,Missed Call,24-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,19905
+9.18043E+11,9.18889E+11,24/10/26 11:08,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19906
+9.18043E+11,9.1846E+11,24/10/26 11:11,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19907
+9.18043E+11,9.19666E+11,24/10/26 11:12,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19908
+9.18043E+11,9.18149E+11,24/10/26 11:14,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19909
+9.18048E+11,9.19993E+11,24/10/26 11:14,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19910
+9.18043E+11,9.19441E+11,24/10/26 11:18,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19911
+9.18043E+11,9.1901E+11,24/10/26 11:18,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19912
+9.18043E+11,9.19371E+11,24/10/26 11:19,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19913
+9.18043E+11,9.19764E+11,24/10/26 11:20,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19914
+9.18043E+11,9.19405E+11,24/10/26 11:20,Missed Call,24-October-2026,West,Maharastra,NASHIK,AJIT NIPHADE,PIMPALGAON,NASHIK 2,9545922899,PT,19915
+9.18043E+11,9.19765E+11,24/10/26 11:23,Missed Call,24-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19916
+9.18049E+11,9.19744E+11,24/10/26 11:23,Missed Call,24-October-2026,South 2,Karnataka,BENGALURU,Nawaz ,Hoskote,CHICKBALLAPUR,9036508848,PT,19917
+9.18043E+11,9.19665E+11,24/10/26 11:24,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19918
+9.18043E+11,9.19371E+11,24/10/26 11:39,Missed Call,24-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19919
+9.18043E+11,9.19677E+11,24/10/26 11:40,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19920
+9.18043E+11,9.19371E+11,24/10/26 11:42,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19921
+9.18043E+11,9.17842E+11,24/10/26 11:43,Missed Call,24-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19922
+9.18043E+11,9.17816E+11,24/10/26 11:44,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19923
+9.18043E+11,9.18412E+11,24/10/26 11:53,Missed Call,24-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19924
+9.18048E+11,9.1973E+11,24/10/26 11:55,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19925
+9.18043E+11,9.18329E+11,24/10/26 11:56,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19926
+9.18043E+11,9.19849E+11,24/10/26 12:00,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19927
+9.18043E+11,9.17703E+11,24/10/26 12:00,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19928
+9.18043E+11,9.1936E+11,24/10/26 12:04,Missed Call,24-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19929
+9.18043E+11,9.1936E+11,24/10/26 12:05,Missed Call,24-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,19930
+9.18043E+11,9.19543E+11,24/10/26 12:05,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19931
+9.18043E+11,9.19624E+11,24/10/26 12:11,Missed Call,24-October-2026,West,Maharastra,AKOLA,SOHEL PAPPUWALE,MAGLURPIR,WASHIM,7972426042,PT,19932
+9.18048E+11,9.18529E+11,24/10/26 12:14,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19933
+9.18048E+11,9.19467E+11,24/10/26 12:17,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19934
+9.18043E+11,9.19908E+11,24/10/26 12:19,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19935
+9.18048E+11,9.19527E+11,24/10/26 12:30,Missed Call,24-October-2026,North II,Punjab,Ludhiana,Ritik Mishra,Ahmedgarh,Malerkotla,8958180719,PT,19936
+9.18049E+11,9.19632E+11,24/10/26 12:37,Missed Call,24-October-2026,South 2,Karnataka,BENGALURU,Madesha S,Gundlupete,MYSORE,7353176967,PT,19937
+9.18049E+11,9.18088E+11,24/10/26 12:37,Missed Call,24-October-2026,South 2,Karnataka,BENGALURU,Madesha S,Gundlupete,MYSORE,7353176967,PT,19938
+9.18048E+11,9.19466E+11,24/10/26 12:41,Missed Call,24-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,19939
+9.18043E+11,9.19112E+11,24/10/26 12:42,Missed Call,24-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,19940
+9.18043E+11,9.18805E+11,24/10/26 12:46,Missed Call,24-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,19941
+9.18043E+11,9.17559E+11,24/10/26 12:48,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19942
+9.18043E+11,9.19021E+11,24/10/26 12:52,Missed Call,24-October-2026,West,Maharastra,PUNE,AJIT GHANWAT,PHALTAN,SATARA,8999204801,PT,19943
+9.18048E+11,9.1978E+11,24/10/26 12:53,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Gurcharan Singh,Faridkot,Moga,8872110176,PO,19944
+9.18043E+11,9.17666E+11,24/10/26 13:00,Missed Call,24-October-2026,West,Maharastra,PUNE,VIPOOL SANGALE,JAYSINGPUR,KOLHAPUR,9175477425,PT,19945
+9.18043E+11,9.1905E+11,24/10/26 13:19,Missed Call,24-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19946
+9.18043E+11,9.1949E+11,24/10/26 13:24,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19947
+9.18043E+11,9.17977E+11,24/10/26 13:40,Missed Call,24-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,19948
+9.18043E+11,9.17799E+11,24/10/26 13:48,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19949
+9.18043E+11,9.19326E+11,24/10/26 14:11,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19950
+9.18043E+11,9.19022E+11,24/10/26 14:13,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19951
+9.18043E+11,9.1772E+11,24/10/26 14:16,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19952
+9.18043E+11,9.19779E+11,24/10/26 14:20,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19953
+9.18043E+11,9.19322E+11,24/10/26 14:27,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,19954
+9.18043E+11,9.19823E+11,24/10/26 14:34,Missed Call,24-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,19955
+9.18043E+11,9.19054E+11,24/10/26 15:13,Missed Call,24-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19956
+9.18043E+11,9.19814E+11,24/10/26 15:14,Missed Call,24-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,19957
+9.18043E+11,9.19923E+11,24/10/26 16:00,Missed Call,24-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,19958
+9.18043E+11,9.18008E+11,24/10/26 16:02,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19959
+9.18048E+11,9.19916E+11,24/10/26 16:02,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Gurmail Singh,Rampura Phul,Bhatinda,7528917462,PT,19960
+9.18043E+11,9.1833E+11,24/10/26 16:29,Missed Call,24-October-2026,West,Maharastra,NASHIK,ABHIJEET CHAVAN,JALNA,JALNA,8329578980,PT,19961
+9.18043E+11,9.19666E+11,24/10/26 16:32,Missed Call,24-October-2026,West,Maharastra,PUNE,MAYUR MAHAMULKAR,PUNE,SATARA,9356067018,PT,19962
+9.18043E+11,9.19392E+11,24/10/26 16:46,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19963
+9.18043E+11,9.19392E+11,24/10/26 16:50,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19964
+9.18048E+11,9.19914E+11,24/10/26 16:51,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Baljeet Singh,Baghapurana,Moga,9781661709,PO,19965
+9.18043E+11,9.19872E+11,24/10/26 16:52,Missed Call,24-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,19966
+9.18043E+11,9.1955E+11,24/10/26 16:59,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19967
+9.18043E+11,9.18985E+11,24/10/26 17:02,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,19968
+9.18043E+11,9.19908E+11,24/10/26 17:02,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,19969
+9.18043E+11,9.19922E+11,24/10/26 17:04,Missed Call,24-October-2026,West,Maharastra,PUNE,SAGAR NANNWARE,KAGAL,KOLHAPUR,9766252651,PT,19970
+9.18043E+11,9.19491E+11,24/10/26 17:05,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19971
+9.18043E+11,9.18007E+11,24/10/26 17:17,Missed Call,24-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19972
+9.18043E+11,9.19912E+11,24/10/26 17:18,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,19973
+9.18043E+11,9.19881E+11,24/10/26 17:22,Missed Call,24-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,19974
+9.18043E+11,9.186E+11,24/10/26 17:28,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19975
+9.18043E+11,9.17067E+11,24/10/26 17:30,Missed Call,24-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19976
+9.18043E+11,9.17732E+11,24/10/26 17:32,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,19977
+9.18048E+11,9.19464E+11,24/10/26 17:32,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Gurmail Singh,Rampura Phul,Bhatinda,7528917462,PT,19978
+9.18043E+11,9.19554E+11,24/10/26 17:35,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,19979
+9.18043E+11,9.1989E+11,24/10/26 17:36,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19980
+9.18043E+11,9.1996E+11,24/10/26 17:41,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19981
+9.18043E+11,9.16304E+11,24/10/26 17:43,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,19982
+9.18043E+11,9.19964E+11,24/10/26 17:49,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19983
+9.18048E+11,9.19478E+11,24/10/26 17:51,Missed Call,24-October-2026,North II,Punjab,Bhatinda,Gurmail Singh,Rampura Phul,Bhatinda,7528917462,PT,19984
+9.18043E+11,9.19763E+11,24/10/26 17:52,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19985
+9.18043E+11,9.19E+11,24/10/26 17:57,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19986
+9.18043E+11,9.19702E+11,24/10/26 18:02,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,V PRASAD RAO,Chinthaluru,Mandapeta,9866485094,PT,19987
+9.18043E+11,9.19952E+11,24/10/26 18:22,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,19988
+9.18043E+11,9.19922E+11,24/10/26 18:29,Missed Call,24-October-2026,West,Maharastra,PUNE,SANKET GODEKAR (MDO),SANGAMNER,AHILYANAGAR,8888030387,PT,19989
+9.18043E+11,9.16295E+11,24/10/26 18:39,Missed Call,24-October-2026,East,West Bengal,KOLKATA-2,AMINUR HOSSAIN,Khargram,BERHAMPORE,8918975196,PT,19990
+9.18043E+11,9.18142E+11,24/10/26 19:05,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19991
+9.18043E+11,9.19643E+11,24/10/26 19:09,Missed Call,24-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,19992
+9.18043E+11,9.19658E+11,24/10/26 19:23,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19993
+9.18043E+11,9.19658E+11,24/10/26 19:23,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,19994
+9.18043E+11,9.1846E+11,24/10/26 19:43,Missed Call,24-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19995
+9.18043E+11,9.19325E+11,24/10/26 19:45,Missed Call,24-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,19996
+9.18043E+11,9.17075E+11,24/10/26 19:50,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19997
+9.18043E+11,9.17075E+11,24/10/26 19:55,Missed Call,24-October-2026,South 1,Andhra Pradesh,Vijayawada,K.Jayaraju,Siddantham,Tadepalligudem,9154492924,PT,19998
+9.18043E+11,9.19285E+11,24/10/26 20:29,Missed Call,24-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,19999
+9.18043E+11,9.19763E+11,24/10/26 20:49,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,20000
+9.18043E+11,9.19561E+11,24/10/26 22:05,Missed Call,24-October-2026,West,Maharastra,PUNE,AMAR GIRASE,OTUR,NARAYANGAON,9168023863,PT,20001
+9.18043E+11,9.1815E+11,24/10/26 22:10,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20002
+9.18043E+11,9.1815E+11,24/10/26 22:10,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20003
+9.18043E+11,9.19325E+11,24/10/26 22:10,Missed Call,24-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20004
+9.18043E+11,9.19588E+11,25/10/26 7:56,Missed Call,25-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,20005
+9.18043E+11,9.19527E+11,25/10/26 7:58,Missed Call,25-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,20006
+9.18048E+11,9.19765E+11,25/10/26 7:58,Missed Call,25-October-2026,North II,Haryana,Hisar,Sunny Kumar,Julana,Jind,6396163100,PT,20007
+9.18043E+11,9.1704E+11,25/10/26 8:22,Missed Call,25-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,20008
+9.18043E+11,9.19834E+11,25/10/26 8:22,Missed Call,25-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,20009
+9.18043E+11,9.19553E+11,25/10/26 8:26,Missed Call,25-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,20010
+9.18043E+11,9.19657E+11,25/10/26 8:30,Missed Call,25-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,20011
+9.18043E+11,9.1986E+11,25/10/26 8:32,Missed Call,25-October-2026,West,Maharastra,AKOLA,AMOL PATOLE,LONAR,BULDHANA,7719948852,PT,20012
+9.18043E+11,9.17549E+11,25/10/26 8:38,Missed Call,25-October-2026,East,West Bengal,KOLKATA-2,PARANABESH DAS,SAGARDIGHI.,BERHAMPORE,9339736775,PT,20013
+9.18043E+11,9.1771E+11,25/10/26 9:18,Missed Call,25-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,20014
+9.18043E+11,9.18838E+11,25/10/26 9:59,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20015
+9.18043E+11,9.19592E+11,25/10/26 9:59,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20016
+9.18043E+11,9.187E+11,25/10/26 9:59,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20017
+9.18043E+11,9.17974E+11,25/10/26 9:59,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20018
+9.18043E+11,9.16284E+11,25/10/26 9:59,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20019
+9.18043E+11,9.17974E+11,25/10/26 10:00,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20020
+9.18043E+11,9.19903E+11,25/10/26 11:28,Missed Call,25-October-2026,South 2,Karnataka,RAICHUR,Basvaraj,Muddapur,SINDHANUR,7019562620,PT,20021
+9.18043E+11,9.19593E+11,25/10/26 12:05,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20022
+9.18043E+11,9.19823E+11,25/10/26 12:24,Missed Call,25-October-2026,West,Maharastra,NASHIK,DNYANESHWAR JADHAV,NIPHAD,NASHIK 2,9307107532,PT,20023
+9.18043E+11,9.1871E+11,25/10/26 12:25,Missed Call,25-October-2026,East,West Bengal,KOLKATA-1,SANJAY DAS,Khar Bazar,EGRA,6295146599,PT,20024
+9.18043E+11,9.19665E+11,25/10/26 13:22,Missed Call,25-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20025
+9.18043E+11,9.17621E+11,25/10/26 13:49,Missed Call,25-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20026
+9.18043E+11,9.19781E+11,25/10/26 14:11,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20027
+9.18043E+11,9.19878E+11,25/10/26 14:14,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20028
+9.18043E+11,9.17495E+11,25/10/26 14:16,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20029
+9.18043E+11,9.19486E+11,25/10/26 14:18,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20030
+9.18043E+11,9.18571E+11,25/10/26 14:20,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20031
+9.18043E+11,9.19518E+11,25/10/26 14:25,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20032
+9.18043E+11,9.1806E+11,25/10/26 14:26,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20033
+9.18043E+11,9.18308E+11,25/10/26 14:26,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20034
+9.18043E+11,9.19992E+11,25/10/26 14:34,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20035
+9.18043E+11,9.19992E+11,25/10/26 14:34,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20036
+9.18043E+11,9.19729E+11,25/10/26 15:02,Missed Call,25-October-2026,North II,Haryana,Hissar,PAWAN KUMAR,Ellanabad,SIRSA,7015923145,PT,20037
+9.18043E+11,9.18408E+11,25/10/26 15:22,Missed Call,25-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,20038
+9.18049E+11,9.17407E+11,25/10/26 16:21,Missed Call,25-October-2026,South 2,Karnataka,BENGALURU,Nandish kar,Hanur,MYSORE,9739353578,PT,20039
+9.18043E+11,9.19494E+11,25/10/26 17:16,Missed Call,25-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,20040
+9.18043E+11,9.19872E+11,25/10/26 18:45,Missed Call,25-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20041
+9.18043E+11,9.1735E+11,25/10/26 19:16,Missed Call,25-October-2026,West,Maharastra,PUNE,VIPOOL SANGALE,JAYSINGPUR,KOLHAPUR,9175477425,PT,20042
+9.18043E+11,9.19891E+11,25/10/26 20:00,Missed Call,25-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,20043
+9.18043E+11,9.18329E+11,25/10/26 20:01,Missed Call,25-October-2026,West,Maharastra,AKOLA,HANUMANT REDE,WADVANI,PARBHANI,7083928604,PT,20044
+9.18043E+11,9.19767E+11,25/10/26 20:28,Missed Call,25-October-2026,West,Maharastra,PUNE,RUPESH POL,Kavtemahankal,SANGLI,9021971002,PT,20045
+9.18043E+11,9.1927E+11,26/10/26 7:39,Missed Call,26-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20046
+9.18043E+11,9.17876E+11,26/10/26 8:13,Missed Call,26-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,20047
+9.18043E+11,9.19882E+11,26/10/26 8:16,Missed Call,26-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,20048
+9.18043E+11,9.17876E+11,26/10/26 8:20,Missed Call,26-October-2026,West,Maharastra,AKOLA,GAJANAN KUBADE,RISOD,WASHIM,9767842413,PT,20049
+9.18043E+11,9.1958E+11,26/10/26 8:29,Missed Call,26-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,20050
+9.18043E+11,9.18975E+11,26/10/26 8:29,Missed Call,26-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,20051
+9.18043E+11,9.19961E+11,26/10/26 8:38,Missed Call,26-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,20052
+9.18048E+11,9.19466E+11,26/10/26 9:21,Missed Call,26-October-2026,North II,Punjab,Bhatinda,Aarish,Fazilka,Fazilka,6239086161,PO,20053
+9.18043E+11,9.18856E+11,26/10/26 9:26,Missed Call,26-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,20054
+9.18043E+11,9.18856E+11,26/10/26 9:27,Missed Call,26-October-2026,West,Maharastra,PUNE,SHIVAJI PISAL,Shrigonda,AHILYANAGAR,9763684558,PT,20055
+9.18043E+11,9.19912E+11,26/10/26 9:46,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20056
+9.18043E+11,9.19912E+11,26/10/26 9:46,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20057
+9.18043E+11,9.19667E+11,26/10/26 9:53,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20058
+9.18043E+11,9.1903E+11,26/10/26 9:53,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,J.Venkatesh,Tanuku,Tadepalligudem,9441344199,PT,20059
+9.18043E+11,9.19554E+11,26/10/26 9:55,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,20060
+9.18043E+11,9.1766E+11,26/10/26 9:58,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20061
+9.18043E+11,9.17029E+11,26/10/26 10:10,Missed Call,26-October-2026,West,Maharastra,NASHIK,KIRAN CHOPADE,MAKHMALABAD,NASHIK 1,9370561323,PT,20062
+9.18043E+11,9.19015E+11,26/10/26 10:13,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,20063
+9.18043E+11,9.19503E+11,26/10/26 10:14,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20064
+9.18043E+11,9.1757E+11,26/10/26 10:14,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20065
+9.18043E+11,9.17207E+11,26/10/26 10:17,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20066
+9.18043E+11,9.17207E+11,26/10/26 10:25,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20067
+9.18043E+11,9.18975E+11,26/10/26 10:29,Missed Call,26-October-2026,West,Maharastra,AKOLA,SHUBHAM AWCHAR,BULDHANA,BULDHANA,9307778774,PT,20068
+9.18043E+11,9.17621E+11,26/10/26 10:40,Missed Call,26-October-2026,West,Maharastra,AKOLA,SUNIL LAKDE,CHIKHALI,BULDHANA,8806105260,PT,20069
+9.18043E+11,9.19543E+11,26/10/26 10:43,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20070
+9.18048E+11,9.18838E+11,26/10/26 10:47,Missed Call,26-October-2026,North II,Punjab,Ludhiana,Ritik Mishra,Ahmedgarh,Malerkotla,8958180719,PT,20071
+9.18043E+11,9.19293E+11,26/10/26 10:49,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20072
+9.18043E+11,9.17721E+11,26/10/26 10:51,Missed Call,26-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20073
+9.18048E+11,9.18038E+11,26/10/26 10:55,Missed Call,26-October-2026,North II,Punjab,Ludhiana,Vikas Gangwar,Tapa Mandi,Barnala,6397576208,PT,20074
+9.18043E+11,9.19506E+11,26/10/26 10:56,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20075
+9.18043E+11,9.17277E+11,26/10/26 11:12,Missed Call,26-October-2026,West,Maharastra,NASHIK,PANKAJ BHAWAR,DINDORI,NASHIK 2,9637820136,PT,20076
+9.18043E+11,9.19891E+11,26/10/26 11:14,Missed Call,26-October-2026,West,Maharastra,NASHIK,RUSHIKESH GUND,YEOLA,YEOLA,8767647713,PT,20077
+9.18043E+11,9.19322E+11,26/10/26 11:15,Missed Call,26-October-2026,West,Maharastra,AKOLA,GANESH DUBE,WASHIM,WASHIM,9623313471,PT,20078
+9.18043E+11,9.19997E+11,26/10/26 11:28,Missed Call,26-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,20079
+9.18043E+11,9.19997E+11,26/10/26 11:29,Missed Call,26-October-2026,North II,Haryana,Hissar,BALWINDER SINGH,Kalanwali,DABWALI,7357515757,PT,20080
+9.18043E+11,9.17084E+11,26/10/26 11:31,Missed Call,26-October-2026,West,Maharastra,AKOLA,PANDURANG PAYGHAN,HINGOLI,WASHIM,9922485676,PT,20081
+9.18049E+11,9.1988E+11,26/10/26 11:31,Missed Call,26-October-2026,South 2,Karnataka,BENGALURU,Chandrappa M N,Kulambi,SHIMOGA,9591868179,PT,20082
+9.18043E+11,9.19971E+11,26/10/26 11:32,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20083
+9.18049E+11,9.19901E+11,26/10/26 11:32,Missed Call,26-October-2026,South 2,Karnataka,RAICHUR,Vishnu,Shorapur,SHAHAPUR - 1,8123931861,PT,20084
+9.18043E+11,9.19763E+11,26/10/26 11:34,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20085
+9.18043E+11,9.1913E+11,26/10/26 11:36,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20086
+9.18043E+11,9.19706E+11,26/10/26 11:36,Missed Call,26-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,20087
+9.18043E+11,9.17973E+11,26/10/26 11:38,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20088
+9.18043E+11,9.17263E+11,26/10/26 11:41,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20089
+9.18043E+11,9.19E+11,26/10/26 11:45,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20090
+9.18048E+11,9.18308E+11,26/10/26 11:49,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20091
+9.18043E+11,9.19357E+11,26/10/26 11:50,Missed Call,26-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,20092
+9.18043E+11,9.19357E+11,26/10/26 11:51,Missed Call,26-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,20093
+9.18043E+11,9.17083E+11,26/10/26 11:51,Missed Call,26-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,20094
+9.18043E+11,9.17621E+11,26/10/26 11:52,Missed Call,26-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,20095
+9.18043E+11,9.17621E+11,26/10/26 11:52,Missed Call,26-October-2026,West,Maharastra,PUNE,PRADIP GAIKWAD,TEMBHURNI,SOLAPUR,7499749260,PT,20096
+9.18043E+11,9.197E+11,26/10/26 12:02,Missed Call,26-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,20097
+9.18043E+11,9.197E+11,26/10/26 12:03,Missed Call,26-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,20098
+9.18043E+11,9.197E+11,26/10/26 12:04,Missed Call,26-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,20099
+9.18048E+11,9.19813E+11,26/10/26 12:05,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20100
+9.18043E+11,9.197E+11,26/10/26 12:05,Missed Call,26-October-2026,West,Maharastra,PUNE,SACHIN WAGHMARE,PUNE,PANDHARPUR,8766576099,PT,20101
+9.18043E+11,9.17351E+11,26/10/26 12:05,Missed Call,26-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20102
+9.18048E+11,9.17206E+11,26/10/26 12:06,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20103
+9.18043E+11,9.19574E+11,26/10/26 12:07,Missed Call,26-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,20104
+9.18048E+11,9.1806E+11,26/10/26 12:09,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20105
+9.18048E+11,9.19816E+11,26/10/26 12:17,Missed Call,26-October-2026,North II,Punjab,Ludhiana,Sandeep Kumar,Patran,Sangrur,9779277813,PT,20106
+9.18043E+11,9.1777E+11,26/10/26 12:42,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20107
+9.18043E+11,9.17351E+11,26/10/26 12:43,Missed Call,26-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20108
+9.18049E+11,9.18861E+11,26/10/26 12:46,Missed Call,26-October-2026,South 2,Karnataka,BENGALURU,Shivaprasad ,Bangarpet,KOLAR,9620908184,PT,20109
+9.18048E+11,9.19992E+11,26/10/26 12:59,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20110
+9.18043E+11,9.1867E+11,26/10/26 13:00,Missed Call,26-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,20111
+9.18043E+11,9.1867E+11,26/10/26 13:00,Missed Call,26-October-2026,West,Maharastra,PUNE,ROHIT UMBARE,PUNE,SOLAPUR,8999769889,PT,20112
+9.18048E+11,9.19992E+11,26/10/26 13:00,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20113
+9.18043E+11,9.19146E+11,26/10/26 13:10,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20114
+9.18043E+11,9.19068E+11,26/10/26 13:16,Missed Call,26-October-2026,West,Maharastra,NASHIK,PRAKASH CHAKOR,SAYKHEDA,NASHIK 1,9730598035,PT,20115
+9.18048E+11,9.19468E+11,26/10/26 13:20,Missed Call,26-October-2026,North II,Haryana,Hisar,Vishnu Kumar,Fatehabad,Fatehabad,9017221229,PO,20116
+9.18043E+11,9.18248E+11,26/10/26 13:33,Missed Call,26-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,20117
+9.18048E+11,9.19914E+11,26/10/26 13:38,Missed Call,26-October-2026,North II,Punjab,Bhatinda,Gurpreet Singh Makkar,Bariwala,Malout,8574600028,PT,20118
+9.18043E+11,9.19515E+11,26/10/26 13:41,Missed Call,26-October-2026,South 1,Telangana,Hyderabad,Adke Ramesh,Tandur,Hyderabad,9963278720,PT,20119
+9.18043E+11,9.1771E+11,26/10/26 14:14,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20120
+9.18048E+11,9.19992E+11,26/10/26 14:18,Missed Call,26-October-2026,North II,Haryana,Karnal,Sandeep Kumar-Madlauda,Madlauda,Sonipat,9518045211,PT,20121
+9.18043E+11,9.18328E+11,26/10/26 14:53,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,y.simhachalam,Kothuru ,Vizianagaram,8500381863,PT,20122
+9.18043E+11,9.19553E+11,26/10/26 15:06,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,y.simhachalam,Kothuru ,Vizianagaram,8500381863,PT,20123
+9.18043E+11,9.19619E+11,26/10/26 15:18,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,Ravi,Khambampadu,Mylavaram,7569098372,PT,20124
+9.18043E+11,9.18333E+11,26/10/26 15:41,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,y.simhachalam,Kothuru ,Vizianagaram,8500381863,PT,20125
+9.18043E+11,9.1996E+11,26/10/26 16:11,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20126
+9.18043E+11,9.19596E+11,26/10/26 16:18,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20127
+9.18043E+11,9.19159E+11,26/10/26 16:33,Missed Call,26-October-2026,West,Maharastra,NAGPUR,ATUL MOHRULE ,GADCHANDIR,CHANDRAPUR ,8308585723,PT,20128
+9.18043E+11,9.19492E+11,26/10/26 16:34,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20129
+9.18048E+11,9.19896E+11,26/10/26 16:36,Missed Call,26-October-2026,North II,Haryana,Karnal,Sandeep Kumar-Madlauda,Madlauda,Sonipat,9518045211,PT,20130
+9.18043E+11,9.19579E+11,26/10/26 16:38,Missed Call,26-October-2026,West,Maharastra,NASHIK,OMKAR KAPADI,SINNER,NASHIK 1,9834603724,PT,20131
+9.18043E+11,9.19441E+11,26/10/26 16:49,Missed Call,26-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,20132
+9.18043E+11,9.19706E+11,26/10/26 16:55,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20133
+9.18048E+11,9.19991E+11,26/10/26 16:56,Missed Call,26-October-2026,North II,Haryana,Karnal,Sandeep Kumar-Madlauda,Madlauda,Sonipat,9518045211,PT,20134
+9.18043E+11,9.19033E+11,26/10/26 17:00,Missed Call,26-October-2026,South 1,Andhra Pradesh,Kurnool,Prabhakar ,Nandyal,Nandyala,9642993500,PT,20135
+9.18043E+11,9.19643E+11,26/10/26 17:00,Missed Call,26-October-2026,East,West Bengal,KOLKATA-2,AMINUR HOSSAIN,Khargram,BERHAMPORE,8918975196,PT,20136
+9.18043E+11,9.19011E+11,26/10/26 17:20,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20137
+9.18043E+11,9.19133E+11,26/10/26 17:46,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,20138
+9.18043E+11,9.16305E+11,26/10/26 17:46,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,Venkatadri,Nandigama,Vijayawada,9542958632,PT,20139
+9.18043E+11,9.19856E+11,26/10/26 18:03,Missed Call,26-October-2026,North II,Punjab,Bhatinda,HARDVINDAR SINGH,Mudki,Moga,9781659533,PT,20140
+9.18043E+11,9.18464E+11,26/10/26 18:09,Missed Call,26-October-2026,South 1,Andhra Pradesh,GUNTUR,Krishnam Setty Venkatesh,Guntur,GUNTUR,9581644476,PT,20141
+9.18043E+11,9.18669E+11,26/10/26 18:23,Missed Call,26-October-2026,West,Maharastra,PUNE,PRASAD SHERKAR,RAHURI,AHILYANAGAR,8805675045,PT,20142
+9.18043E+11,9.19636E+11,26/10/26 18:33,Missed Call,26-October-2026,East,West Bengal,KOLKATA-1,SANJAY DAS,Khar Bazar,EGRA,6295146599,PT,20143
+9.18043E+11,9.18625E+11,26/10/26 18:43,Missed Call,26-October-2026,West,Maharastra,NASHIK,JAYDIP GAWANDE,JAMNER,JALGAON,7499548829,PT,20144
+9.18043E+11,9.19949E+11,26/10/26 18:43,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20145
+9.18043E+11,9.17037E+11,26/10/26 18:44,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20146
+9.18043E+11,9.19002E+11,26/10/26 18:51,Missed Call,26-October-2026,East,West Bengal,KOLKATA-2,AMINUR HOSSAIN,Khargram,BERHAMPORE,8918975196,PT,20147
+9.18043E+11,9.19011E+11,26/10/26 18:52,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20148
+9.18043E+11,9.19285E+11,26/10/26 18:56,Missed Call,26-October-2026,West,Maharastra,NASHIK,PRATIK SIRSATH,VANI,NASHIK 2,9284248855,PT,20149
+9.18043E+11,9.19134E+11,26/10/26 19:05,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20150
+9.18043E+11,9.19421E+11,26/10/26 19:13,Missed Call,26-October-2026,West,Maharastra,AKOLA,VAIBHAB BHISE,GANGAKHED,PARBHANI,8605142608,PT,20151
+9.18043E+11,9.18011E+11,26/10/26 19:21,Missed Call,26-October-2026,West,Maharastra,NASHIK,KIRAN CHOPADE,MAKHMALABAD,NASHIK 1,9370561323,PT,20152
+9.18043E+11,9.19665E+11,26/10/26 20:39,Missed Call,26-October-2026,West,Maharastra,PUNE,CHAITANYA PATIL,PUNE,SATARA,8856850066,PT,20153
+9.18043E+11,9.19146E+11,26/10/26 20:46,Missed Call,26-October-2026,West,Maharastra,NASHIK,AJIT NIPHADE,PIMPALGAON,NASHIK 2,9545922899,PT,20154
+9.18043E+11,9.17417E+11,26/10/26 21:11,Missed Call,26-October-2026,South 1,Andhra Pradesh,Vijayawada,K LAKSHMI NARAYANA,Ramachandrapuram,Mandapeta,8328669643,PT,20155
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
 ,,,,,,,,,,,,,
